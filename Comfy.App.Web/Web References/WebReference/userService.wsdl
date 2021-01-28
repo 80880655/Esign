@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="IsConnected">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsConnectedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsConnectedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Validate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:LoginUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LoginUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ValidateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateResult" type="tns:ServiceResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:LoginUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ServiceResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExceptionStackTrace" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidateResult" type="tns:ValidateResult" />
+          <s:element minOccurs="1" maxOccurs="1" name="RowAffected" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ValidateResult">
+        <s:restriction base="s:string">
+          <s:enumeration value="Successed" />
+          <s:enumeration value="UserIDExisted" />
+          <s:enumeration value="UserIDNotExist" />
+          <s:enumeration value="PasswordNotCorrect" />
+          <s:enumeration value="PasswordIsNull" />
+          <s:enumeration value="PasswordOverdue" />
+          <s:enumeration value="Exception" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserInfoResult" type="tns:ServiceResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="userInfo" type="tns:UserInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:LoginUser">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Classno" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EmpId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Jobno" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email02" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email03" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Phone02" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Phone03" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Phone04" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Creator" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreateDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Updator" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UpdateDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="InHR" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetEmployeeInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeInfoResult" type="tns:ServiceResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeInfo" type="tns:EmployeeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EmployeeInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:UserInfo">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="DeptID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DeptName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CardDeptID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CardDeptName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetEmployeeInfoBy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userIDorName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeInfoByResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeInfoByResult" type="tns:ServiceResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeInfoArray" type="tns:ArrayOfEmployeeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmployeeInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeeInfo" nillable="true" type="tns:EmployeeInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllEmployeeInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployeeInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeeInfoResult" type="tns:ServiceResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeInfoArray" type="tns:ArrayOfEmployeeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userInfo" type="tns:UserInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="creatorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddUserInfoResult" type="tns:ServiceResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userInfo" type="tns:UserInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="updatorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateUserInfoResult" type="tns:ServiceResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePwd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:LoginUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePwdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdatePwdResult" type="tns:ServiceResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DenyUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DenyUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DenyUserResult" type="tns:ServiceResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUser_ByCommLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUser_ByCommLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateUser_ByCommLangResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="ServiceResult" nillable="true" type="tns:ServiceResult" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IsConnectedSoapIn">
+    <wsdl:part name="parameters" element="tns:IsConnected" />
+  </wsdl:message>
+  <wsdl:message name="IsConnectedSoapOut">
+    <wsdl:part name="parameters" element="tns:IsConnectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateSoapIn">
+    <wsdl:part name="parameters" element="tns:Validate" />
+  </wsdl:message>
+  <wsdl:message name="ValidateSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeInfoBySoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeInfoBy" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeInfoBySoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeInfoByResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:AddUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="AddUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:AddUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePwdSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePwd" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePwdSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="DenyUserSoapIn">
+    <wsdl:part name="parameters" element="tns:DenyUser" />
+  </wsdl:message>
+  <wsdl:message name="DenyUserSoapOut">
+    <wsdl:part name="parameters" element="tns:DenyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUser_ByCommLangSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateUser_ByCommLang" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUser_ByCommLangSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateUser_ByCommLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsConnectedHttpGetIn" />
+  <wsdl:message name="IsConnectedHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DenyUserHttpGetIn">
+    <wsdl:part name="userID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DenyUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:ServiceResult" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUser_ByCommLangHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="UserPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUser_ByCommLangHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IsConnectedHttpPostIn" />
+  <wsdl:message name="IsConnectedHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DenyUserHttpPostIn">
+    <wsdl:part name="userID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DenyUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:ServiceResult" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUser_ByCommLangHttpPostIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="UserPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUser_ByCommLangHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="UserServiceSoap">
+    <wsdl:operation name="IsConnected">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">測試連接是否成功</wsdl:documentation>
+      <wsdl:input message="tns:IsConnectedSoapIn" />
+      <wsdl:output message="tns:IsConnectedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Validate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">驗証用戶.&lt;br/&gt;ValidateResult:Successed,PasswordIsNull,PasswordOverdue,UserIDNotExist,PasswordNotCorrect,Exception</wsdl:documentation>
+      <wsdl:input message="tns:ValidateSoapIn" />
+      <wsdl:output message="tns:ValidateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根據UserID讀取用戶信息.&lt;br/&gt;ValidateResult:Successed,UserIDNotExist,Exception</wsdl:documentation>
+      <wsdl:input message="tns:GetUserInfoSoapIn" />
+      <wsdl:output message="tns:GetUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根據UserID讀取用戶信息.&lt;br/&gt;ValidateResult:Successed,UserIDNotExist,Exception</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeeInfoSoapIn" />
+      <wsdl:output message="tns:GetEmployeeInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeInfoBy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根據UserID/UserName讀取用戶信息.&lt;br/&gt;ValidateResult:Successed,Exception</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeeInfoBySoapIn" />
+      <wsdl:output message="tns:GetEmployeeInfoBySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">讀取所有用戶信息.&lt;br/&gt;ValidateResult:Successed,Exception</wsdl:documentation>
+      <wsdl:input message="tns:GetAllEmployeeInfoSoapIn" />
+      <wsdl:output message="tns:GetAllEmployeeInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">已過時，請在用戶管理系統中添加用戶。新建用戶信息.&lt;br/&gt;ValidateResult:Successed,UserIDExisted,Exception。</wsdl:documentation>
+      <wsdl:input message="tns:AddUserInfoSoapIn" />
+      <wsdl:output message="tns:AddUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">已過時，請在用戶管理系統中修改。修改用戶信息.&lt;br/&gt;ValidateResult:Successed,Exception。</wsdl:documentation>
+      <wsdl:input message="tns:UpdateUserInfoSoapIn" />
+      <wsdl:output message="tns:UpdateUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePwd">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">已過時，請在用戶管理系統中修改。修改密碼.&lt;br/&gt;ValidateResult:Successed,PasswordNotCorrect,Exception。</wsdl:documentation>
+      <wsdl:input message="tns:UpdatePwdSoapIn" />
+      <wsdl:output message="tns:UpdatePwdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DenyUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">已過時，請在用戶管理系統中修改。禁用用戶.&lt;br/&gt;ValidateResult:Successed,Exception。</wsdl:documentation>
+      <wsdl:input message="tns:DenyUserSoapIn" />
+      <wsdl:output message="tns:DenyUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser_ByCommLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">驗証用戶For公共語言.&lt;br/&gt;ValidateResult:Successed,PasswordIsNull,PasswordOverdue,UserIDNotExist,PasswordNotCorrect,Exception</wsdl:documentation>
+      <wsdl:input message="tns:ValidateUser_ByCommLangSoapIn" />
+      <wsdl:output message="tns:ValidateUser_ByCommLangSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="UserServiceHttpGet">
+    <wsdl:operation name="IsConnected">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">測試連接是否成功</wsdl:documentation>
+      <wsdl:input message="tns:IsConnectedHttpGetIn" />
+      <wsdl:output message="tns:IsConnectedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DenyUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">已過時，請在用戶管理系統中修改。禁用用戶.&lt;br/&gt;ValidateResult:Successed,Exception。</wsdl:documentation>
+      <wsdl:input message="tns:DenyUserHttpGetIn" />
+      <wsdl:output message="tns:DenyUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser_ByCommLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">驗証用戶For公共語言.&lt;br/&gt;ValidateResult:Successed,PasswordIsNull,PasswordOverdue,UserIDNotExist,PasswordNotCorrect,Exception</wsdl:documentation>
+      <wsdl:input message="tns:ValidateUser_ByCommLangHttpGetIn" />
+      <wsdl:output message="tns:ValidateUser_ByCommLangHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="UserServiceHttpPost">
+    <wsdl:operation name="IsConnected">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">測試連接是否成功</wsdl:documentation>
+      <wsdl:input message="tns:IsConnectedHttpPostIn" />
+      <wsdl:output message="tns:IsConnectedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DenyUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">已過時，請在用戶管理系統中修改。禁用用戶.&lt;br/&gt;ValidateResult:Successed,Exception。</wsdl:documentation>
+      <wsdl:input message="tns:DenyUserHttpPostIn" />
+      <wsdl:output message="tns:DenyUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser_ByCommLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">驗証用戶For公共語言.&lt;br/&gt;ValidateResult:Successed,PasswordIsNull,PasswordOverdue,UserIDNotExist,PasswordNotCorrect,Exception</wsdl:documentation>
+      <wsdl:input message="tns:ValidateUser_ByCommLangHttpPostIn" />
+      <wsdl:output message="tns:ValidateUser_ByCommLangHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserServiceSoap" type="tns:UserServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsConnected">
+      <soap:operation soapAction="http://tempuri.org/IsConnected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Validate">
+      <soap:operation soapAction="http://tempuri.org/Validate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap:operation soapAction="http://tempuri.org/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeInfo">
+      <soap:operation soapAction="http://tempuri.org/GetEmployeeInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeInfoBy">
+      <soap:operation soapAction="http://tempuri.org/GetEmployeeInfoBy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeInfo">
+      <soap:operation soapAction="http://tempuri.org/GetAllEmployeeInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserInfo">
+      <soap:operation soapAction="http://tempuri.org/AddUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePwd">
+      <soap:operation soapAction="http://tempuri.org/UpdatePwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DenyUser">
+      <soap:operation soapAction="http://tempuri.org/DenyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser_ByCommLang">
+      <soap:operation soapAction="http://tempuri.org/ValidateUser_ByCommLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserServiceSoap12" type="tns:UserServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsConnected">
+      <soap12:operation soapAction="http://tempuri.org/IsConnected" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Validate">
+      <soap12:operation soapAction="http://tempuri.org/Validate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetEmployeeInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeInfoBy">
+      <soap12:operation soapAction="http://tempuri.org/GetEmployeeInfoBy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetAllEmployeeInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/AddUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePwd">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DenyUser">
+      <soap12:operation soapAction="http://tempuri.org/DenyUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser_ByCommLang">
+      <soap12:operation soapAction="http://tempuri.org/ValidateUser_ByCommLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserServiceHttpGet" type="tns:UserServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="IsConnected">
+      <http:operation location="/IsConnected" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DenyUser">
+      <http:operation location="/DenyUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser_ByCommLang">
+      <http:operation location="/ValidateUser_ByCommLang" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserServiceHttpPost" type="tns:UserServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="IsConnected">
+      <http:operation location="/IsConnected" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DenyUser">
+      <http:operation location="/DenyUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser_ByCommLang">
+      <http:operation location="/ValidateUser_ByCommLang" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserService">
+    <wsdl:port name="UserServiceSoap" binding="tns:UserServiceSoap">
+      <soap:address location="http://10.184.101.12/authentication2/userService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserServiceSoap12" binding="tns:UserServiceSoap12">
+      <soap12:address location="http://10.184.101.12/authentication2/userService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserServiceHttpGet" binding="tns:UserServiceHttpGet">
+      <http:address location="http://10.184.101.12/authentication2/userService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserServiceHttpPost" binding="tns:UserServiceHttpPost">
+      <http:address location="http://10.184.101.12/authentication2/userService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

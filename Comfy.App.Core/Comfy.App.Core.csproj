@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B113A247-10AE-423A-9FDC-659C9F49D92E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Comfy.App.Core</RootNamespace>
+    <AssemblyName>Comfy.App.Core</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/Comfy.App.Core/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Oracle|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MSSQL|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\MSSQL\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MSSQL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="MSSQL.cs" />
+    <Compile Include="Oracle.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QualityCode\AvaWidth.cs" />
+    <Compile Include="QualityCode\CAttribute.cs" />
+    <Compile Include="QualityCode\CustomerManager.cs" />
+    <Compile Include="QualityCode\FabricCodeModel.cs" />
+    <Compile Include="QualityCode\PbknitconstructionManager.cs" />
+    <Compile Include="QualityCode\PbknitconstructionModel.cs" />
+    <Compile Include="QualityCode\PbknitdyemethodManager.cs" />
+    <Compile Include="QualityCode\PbknitdyemethodModel.cs" />
+    <Compile Include="QualityCode\PbknitfinishManager.cs" />
+    <Compile Include="QualityCode\PbknitfinishModel.cs" />
+    <Compile Include="QualityCode\PbknitparameterManager.cs" />
+    <Compile Include="QualityCode\PbknitparameterModel.cs" />
+    <Compile Include="QualityCode\PbknityarncountManager.cs" />
+    <Compile Include="QualityCode\PbknityarncountModel.cs" />
+    <Compile Include="QualityCode\PbknityarntypeManager.cs" />
+    <Compile Include="QualityCode\PbknityarntypeModel.cs" />
+    <Compile Include="QualityCode\QcavailablewidthManager.cs" />
+    <Compile Include="QualityCode\QcavailablewidthModel.cs" />
+    <Compile Include="QualityCode\QcconstructiondtlManager.cs" />
+    <Compile Include="QualityCode\QcconstructiondtlModel.cs" />
+    <Compile Include="QualityCode\QccustomerlibraryManager.cs" />
+    <Compile Include="QualityCode\QccustomerlibraryModel.cs" />
+    <Compile Include="QualityCode\QcfinishdtlManager.cs" />
+    <Compile Include="QualityCode\QcfinishdtlModel.cs" />
+    <Compile Include="QualityCode\QcmaininfologManager.cs" />
+    <Compile Include="QualityCode\QcmaininfologModel.cs" />
+    <Compile Include="QualityCode\QcmaininfoManager.cs" />
+    <Compile Include="QualityCode\QcmaininfoModel.cs" />
+    <Compile Include="QualityCode\QcmaininfoModelGen.cs" />
+    <Compile Include="QualityCode\QcUtil.cs" />
+    <Compile Include="QualityCode\QcyarndtlManager.cs" />
+    <Compile Include="QualityCode\QcyarndtlModel.cs" />
+    <Compile Include="QualityCode\QC_HF_ChangeLogManager.cs" />
+    <Compile Include="QualityCode\QC_HF_ChangeLogModel.cs" />
+    <Compile Include="QualityCode\User.cs" />
+    <Compile Include="QualityCode\YarnInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Comfy.Data\Comfy.Data.csproj">
+      <Project>{EF09D4EE-2134-4291-816D-B6C6339BC47E}</Project>
+      <Name>Comfy.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comfy.Utils\Comfy.Utils.csproj">
+      <Project>{6E0ED7F7-9C0C-418D-BE53-31B999C23DF4}</Project>
+      <Name>Comfy.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

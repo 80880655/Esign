@@ -1,0 +1,22 @@
+﻿.popupOutDiv
+{
+     border: solid 1px #8BB6EF;
+     filter: progid:DXImageTransform.Microsoft.Shadow(color=#92A0B1,direction=130,strength=5);
+     background-color: #CFE3FB;
+ }
+ 
+ .popupHeadDiv
+ {
+
+     border-bottom: solid 1px #8BB6EF;
+      cursor: move;
+     
+  }
+  
+  .popupHeadClose
+  {
+      
+    float: right;
+    margin: 2px 2px 0 0;
+    cursor: pointer;  
+  }

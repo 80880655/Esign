@@ -1,0 +1,48 @@
+﻿
+
+
+
+
+       a:link
+        {
+            text-decoration: none;
+            color: black;
+        }
+        a:visited
+        {
+            text-decoration: none;
+            color: black;
+        }
+        a:hover
+        {
+            text-decoration: underline;
+            color: black;
+        }
+        a:active
+        {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #slide
+        {
+            overflow: hidden;
+            width: 460px;
+            margin: 0px auto;
+            height: 20px;
+        }
+        ul
+        {
+            list-style: none;
+        }
+       #slide li
+        {
+            float: left;
+        }
+        .slideul1
+        {
+            width: 3999px;
+        }
+
+        
+        

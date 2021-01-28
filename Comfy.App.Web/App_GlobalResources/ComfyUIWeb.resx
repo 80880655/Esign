@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ASPxWebStringId.Loading" xml:space="preserve">
+    <value>加載中&amp;hellip;  </value>
+    <comment>Loading&amp;hellip;</comment>
+  </data>
+  <data name="ASPxWebStringId.Pager_All" xml:space="preserve">
+    <value>所有頁</value>
+    <comment>All</comment>
+  </data>
+  <data name="ASPxWebStringId.Pager_First" xml:space="preserve">
+    <value>第一頁</value>
+    <comment>First</comment>
+  </data>
+  <data name="ASPxWebStringId.Pager_Prev" xml:space="preserve">
+    <value>前一頁</value>
+    <comment>Prev</comment>
+  </data>
+  <data name="ASPxWebStringId.Pager_Next" xml:space="preserve">
+    <value>下一頁</value>
+    <comment>Next</comment>
+  </data>
+  <data name="ASPxWebStringId.Pager_Last" xml:space="preserve">
+    <value>最後一頁</value>
+    <comment>Last</comment>
+  </data>
+  <data name="ASPxWebStringId.Pager_SummaryFormat" xml:space="preserve">
+    <value>第 {0} 頁 共 {1} 頁 (共 {2} 條記錄)</value>
+    <comment>Page {0} of {1} ({2} items)</comment>
+  </data>
+  <data name="ASPxWebStringId.Pager_SummaryAllPagesFormat" xml:space="preserve">
+    <value>第 {0} 頁 共 {1} 頁 (共 {2} 條記錄)</value>
+    <comment>Pages: {0} - {1} ({2} items)</comment>
+  </data>
+  <data name="ASPxWebStringId.DataView_PagerSummaryFormat" xml:space="preserve">
+    <value>Page {0} of {1}</value>
+    <comment>Page {0} of {1}</comment>
+  </data>
+  <data name="ASPxWebStringId.DataView_PagerSummaryAllPages" xml:space="preserve">
+    <value>All pages</value>
+    <comment>All pages</comment>
+  </data>
+  <data name="ASPxWebStringId.NewsControl_BackToTop" xml:space="preserve">
+    <value>Back to top</value>
+    <comment>Back to top</comment>
+  </data>
+  <data name="ASPxWebStringId.NewsControl_Page" xml:space="preserve">
+    <value>Page:</value>
+    <comment>Page:</comment>
+  </data>
+  <data name="ASPxWebStringId.PopupControl_CloseButton" xml:space="preserve">
+    <value>[Close]</value>
+    <comment>[Close]</comment>
+  </data>
+  <data name="ASPxWebStringId.PopupControl_SizeGrip" xml:space="preserve">
+    <value>[Resize]</value>
+    <comment>[Resize]</comment>
+  </data>
+  <data name="ASPxWebStringId.TitleIndex_FilterCaption" xml:space="preserve">
+    <value>Filter:&amp;nbsp;&amp;nbsp;&amp;nbsp;</value>
+    <comment>Filter:&amp;nbsp;&amp;nbsp;&amp;nbsp;</comment>
+  </data>
+  <data name="ASPxWebStringId.TitleIndex_FilterHint" xml:space="preserve">
+    <value>&lt;b&gt;?&lt;/b&gt; = any single character
+&lt;b&gt;*&lt;/b&gt; = any characters</value>
+    <comment>&lt;b&gt;?&lt;/b&gt; = any single character
+&lt;b&gt;*&lt;/b&gt; = any characters</comment>
+  </data>
+  <data name="ASPxWebStringId.TitleIndex_BackToTop" xml:space="preserve">
+    <value>[Back to Top]</value>
+    <comment>[Back to Top]</comment>
+  </data>
+  <data name="ASPxWebStringId.TitleIndex_NoData" xml:space="preserve">
+    <value>No data for this filter criteria</value>
+    <comment>No data for this filter criteria</comment>
+  </data>
+  <data name="ASPxWebStringId.UploadControl_RemoveButton" xml:space="preserve">
+    <value>Remove</value>
+    <comment>Remove</comment>
+  </data>
+  <data name="ASPxWebStringId.UploadControl_AddButton" xml:space="preserve">
+    <value>Add</value>
+    <comment>Add</comment>
+  </data>
+  <data name="ASPxWebStringId.UploadControl_UploadButton" xml:space="preserve">
+    <value>Upload</value>
+    <comment>Upload</comment>
+  </data>
+  <data name="ASPxEditorsStringId.Calendar_Cancel" xml:space="preserve">
+    <value>取消</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="ASPxEditorsStringId.Calendar_Clear" xml:space="preserve">
+    <value>清空</value>
+    <comment>Clear</comment>
+  </data>
+  <data name="ASPxEditorsStringId.Calendar_OK" xml:space="preserve">
+    <value>確定</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ASPxEditorsStringId.Calendar_Today" xml:space="preserve">
+    <value>今天</value>
+    <comment>Today</comment>
+  </data>
+  <data name="ASPxEditorsStringId.DefaultErrorText" xml:space="preserve">
+    <value>Invalid value</value>
+    <comment>Invalid value</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterConrol_EmptyEnter" xml:space="preserve">
+    <value>&amp;lt;enter a value&amp;gt;</value>
+    <comment>&amp;lt;enter a value&amp;gt;</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_AddCondition" xml:space="preserve">
+    <value>Add Condition</value>
+    <comment>Add Condition</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_AddConditionHint" xml:space="preserve">
+    <value>Adds a new condition to this group</value>
+    <comment>Adds a new condition to this group</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_AddGroup" xml:space="preserve">
+    <value>Add Group</value>
+    <comment>Add Group</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_AddValueHint" xml:space="preserve">
+    <value>Adds a new item to the list</value>
+    <comment>Adds a new item to the list</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_BetweenAnd" xml:space="preserve">
+    <value>And</value>
+    <comment>And</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_ClauseType" xml:space="preserve">
+    <value>Equals,Does not equal,Is greater than,Is greater than or equal to,Is less than,Is less than or equal to,Is between,Is not between,Contains,Does not contain,Begins with,Ends with,Is like,Is not like,Is blank,Is not blank,Is any of,Is none of</value>
+    <comment>Equals,Does not equal,Is greater than,Is greater than or equal to,Is less than,Is less than or equal to,Is between,Is not between,Contains,Does not contain,Begins with,Ends with,Is like,Is not like,Is blank,Is not blank,Is any of,Is none of</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_ClearFilter" xml:space="preserve">
+    <value>Clear</value>
+    <comment>Clear</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_GroupType" xml:space="preserve">
+    <value> And,Or,Not And,Not Or</value>
+    <comment>And,Or,Not And,Not Or</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_OK" xml:space="preserve">
+    <value>OK</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_PopupHeaderText" xml:space="preserve">
+    <value>Filter Builder</value>
+    <comment>Filter Builder</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_Remove" xml:space="preserve">
+    <value>Remove</value>
+    <comment>Remove</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_RemoveConditionHint" xml:space="preserve">
+    <value>Removes this condition</value>
+    <comment>Removes this condition</comment>
+  </data>
+  <data name="ASPxEditorsStringId.FilterControl_ShowFilterControl" xml:space="preserve">
+    <value>Create Filter</value>
+    <comment>Create Filter</comment>
+  </data>
+  <data name="ASPxEditorsStringId.RegExValidationErrorText" xml:space="preserve">
+    <value>Regular expression validation failed</value>
+    <comment>Regular expression validation failed</comment>
+  </data>
+  <data name="ASPxEditorsStringId.RequiredFieldErrorText" xml:space="preserve">
+    <value>*</value>
+    <comment>*</comment>
+  </data>
+  <data name="ASPxGridViewStringId.Alt_Collapse" xml:space="preserve">
+    <value>[Collapse]</value>
+    <comment>[Collapse]</comment>
+  </data>
+  <data name="ASPxGridViewStringId.Alt_DragAndDropHideColumnIcon" xml:space="preserve">
+    <value>Hide</value>
+    <comment>Hide</comment>
+  </data>
+  <data name="ASPxGridViewStringId.Alt_Expand" xml:space="preserve">
+    <value>[Expand]</value>
+    <comment>[Expand]</comment>
+  </data>
+  <data name="ASPxGridViewStringId.Alt_FilterRowButton" xml:space="preserve">
+    <value>[Condition]</value>
+    <comment>[Condition]</comment>
+  </data>
+  <data name="ASPxGridViewStringId.Alt_HeaderFilterButton" xml:space="preserve">
+    <value>[Filter]</value>
+    <comment>[Filter]</comment>
+  </data>
+  <data name="ASPxGridViewStringId.Alt_HeaderFilterButtonActive" xml:space="preserve">
+    <value>[Filtered]</value>
+    <comment>[Filtered]</comment>
+  </data>
+  <data name="ASPxGridViewStringId.Alt_SortedAscending" xml:space="preserve">
+    <value>(Ascending)</value>
+    <comment>(Ascending)</comment>
+  </data>
+  <data name="ASPxGridViewStringId.Alt_SortedDescending" xml:space="preserve">
+    <value>(Descending)</value>
+    <comment>(Descending)</comment>
+  </data>
+  <data name="ASPxGridViewStringId.AutoFilterBeginsWith" xml:space="preserve">
+    <value>Begins with</value>
+    <comment>Begins with</comment>
+  </data>
+  <data name="ASPxGridViewStringId.AutoFilterContains" xml:space="preserve">
+    <value>Contains</value>
+    <comment>Contains</comment>
+  </data>
+  <data name="ASPxGridViewStringId.AutoFilterEndsWith" xml:space="preserve">
+    <value>Ends with</value>
+    <comment>Ends with</comment>
+  </data>
+  <data name="ASPxGridViewStringId.AutoFilterEquals" xml:space="preserve">
+    <value>Equals</value>
+    <comment>Equals</comment>
+  </data>
+  <data name="ASPxGridViewStringId.AutoFilterGreater" xml:space="preserve">
+    <value>Is greater than</value>
+    <comment>Is greater than</comment>
+  </data>
+  <data name="ASPxGridViewStringId.AutoFilterGreaterOrEqual" xml:space="preserve">
+    <value>Is greater than or equal to</value>
+    <comment>Is greater than or equal to</comment>
+  </data>
+  <data name="ASPxGridViewStringId.AutoFilterLess" xml:space="preserve">
+    <value>Is less than</value>
+    <comment>Is less than</comment>
+  </data>
+  <data name="ASPxGridViewStringId.AutoFilterLessOrEqual" xml:space="preserve">
+    <value>Is less than or equal to</value>
+    <comment>Is less than or equal to</comment>
+  </data>
+  <data name="ASPxGridViewStringId.AutoFilterNotEqual" xml:space="preserve">
+    <value>Doesn't equal</value>
+    <comment>Doesn't equal</comment>
+  </data>
+  <data name="ASPxGridViewStringId.Checked" xml:space="preserve">
+    <value>Checked</value>
+    <comment>Checked</comment>
+  </data>
+  <data name="ASPxGridViewStringId.CommandCancel" xml:space="preserve">
+    <value>取消</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="ASPxGridViewStringId.CommandClearFilter" xml:space="preserve">
+    <value>清空</value>
+    <comment>Clear</comment>
+  </data>
+  <data name="ASPxGridViewStringId.CommandDelete" xml:space="preserve">
+    <value>刪除</value>
+    <comment>Delete</comment>
+  </data>
+  <data name="ASPxGridViewStringId.CommandEdit" xml:space="preserve">
+    <value>編輯</value>
+    <comment>Edit</comment>
+  </data>
+  <data name="ASPxGridViewStringId.CommandNew" xml:space="preserve">
+    <value>新建</value>
+    <comment>New</comment>
+  </data>
+  <data name="ASPxGridViewStringId.CommandSelect" xml:space="preserve">
+    <value>選擇</value>
+    <comment>Select</comment>
+  </data>
+  <data name="ASPxGridViewStringId.CommandUpdate" xml:space="preserve">
+    <value>保存</value>
+    <comment>Update</comment>
+  </data>
+  <data name="ASPxGridViewStringId.CommandUpdateExit" xml:space="preserve">
+    <value>保存後關閉</value>
+    <comment>Save &amp; Close</comment>
+  </data>
+  <data name="ASPxGridViewStringId.ConfirmDelete" xml:space="preserve">
+    <value>確定要刪除當前行嗎?</value>
+    <comment>Confirm Delete?</comment>
+  </data>
+  <data name="ASPxGridViewStringId.CustomizationWindowCaption" xml:space="preserve">
+    <value>Field Chooser</value>
+    <comment>Field Chooser</comment>
+  </data>
+  <data name="ASPxGridViewStringId.EmptyDataRow" xml:space="preserve">
+    <value>當前沒有數據可以顯示</value>
+    <comment>No data to display</comment>
+  </data>
+  <data name="ASPxGridViewStringId.EmptyHeaders" xml:space="preserve">
+    <value>Drag a column here...</value>
+    <comment>Drag a column here...</comment>
+  </data>
+  <data name="ASPxGridViewStringId.GroupContinuedOnNextPage" xml:space="preserve">
+    <value>(下一頁繼續)</value>
+    <comment>(Continued on the next page)</comment>
+  </data>
+  <data name="ASPxGridViewStringId.GroupPanel" xml:space="preserve">
+    <value>Drag a column header here to group by that column</value>
+    <comment>Drag a column header here to group by that column</comment>
+  </data>
+  <data name="ASPxGridViewStringId.HeaderFilterShowAllItem" xml:space="preserve">
+    <value>(All)</value>
+    <comment>(All)</comment>
+  </data>
+  <data name="ASPxGridViewStringId.PopupEditFormCaption" xml:space="preserve">
+    <value>Edit Form</value>
+    <comment>Edit Form</comment>
+  </data>
+  <data name="ASPxGridViewStringId.Unchecked" xml:space="preserve">
+    <value>Unchecked</value>
+    <comment>Unchecked</comment>
+  </data>
+  <data name="ASPxTreeListStringId.Alt_Collapse" xml:space="preserve">
+    <value>[Collapse]</value>
+    <comment>[Collapse]</comment>
+  </data>
+  <data name="ASPxTreeListStringId.Alt_DragAndDropHideColumnIcon" xml:space="preserve">
+    <value>Hide</value>
+    <comment>Hide</comment>
+  </data>
+  <data name="ASPxTreeListStringId.Alt_Expand" xml:space="preserve">
+    <value>[Expand]</value>
+    <comment>[Expand]</comment>
+  </data>
+  <data name="ASPxTreeListStringId.Alt_SortedAscending" xml:space="preserve">
+    <value>(Ascending)</value>
+    <comment>(Ascending)</comment>
+  </data>
+  <data name="ASPxTreeListStringId.Alt_SortedDescending" xml:space="preserve">
+    <value>(Descending)</value>
+    <comment>(Descending)</comment>
+  </data>
+  <data name="ASPxTreeListStringId.CommandCancel" xml:space="preserve">
+    <value>取消</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="ASPxTreeListStringId.CommandDelete" xml:space="preserve">
+    <value>刪除</value>
+    <comment>Delete</comment>
+  </data>
+  <data name="ASPxTreeListStringId.CommandEdit" xml:space="preserve">
+    <value>編輯</value>
+    <comment>Edit</comment>
+  </data>
+  <data name="ASPxTreeListStringId.CommandNew" xml:space="preserve">
+    <value>新增</value>
+    <comment>New</comment>
+  </data>
+  <data name="ASPxTreeListStringId.CommandUpdate" xml:space="preserve">
+    <value>保存</value>
+    <comment>Update</comment>
+  </data>
+  <data name="ASPxTreeListStringId.ConfirmDelete" xml:space="preserve">
+    <value>確定要刪除當前行嗎?</value>
+    <comment>Confirm Delete?</comment>
+  </data>
+  <data name="ASPxTreeListStringId.CustomizationWindowCaption" xml:space="preserve">
+    <value>Field Chooser</value>
+    <comment>Field Chooser</comment>
+  </data>
+  <data name="ASPxTreeListStringId.RecursiveDeleteError" xml:space="preserve">
+    <value>The node has descendant nodes.</value>
+    <comment>The node has descendant nodes.</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.Alt_ConstrainProportions" xml:space="preserve">
+    <value>Constrain Proportions On</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.Alt_ConstrainProportionsOff" xml:space="preserve">
+    <value>Constrain Proportions Off</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ButtonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ButtonChange" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ButtonInsert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ButtonOk" xml:space="preserve">
+    <value>確定</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ChangeImage" xml:space="preserve">
+    <value>更換圖片</value>
+    <comment>Change Image</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ChangeLink" xml:space="preserve">
+    <value>更換聯接</value>
+    <comment>Change Link</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandApplyCss" xml:space="preserve">
+    <value>應用樣式</value>
+    <comment>Apply CSS</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandBackColor" xml:space="preserve">
+    <value>背景色</value>
+    <comment>Back Color</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandBold" xml:space="preserve">
+    <value>加粗</value>
+    <comment>Bold</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandBulletList" xml:space="preserve">
+    <value>項列表</value>
+    <comment>Bullet List</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandCenter" xml:space="preserve">
+    <value>中間對齊</value>
+    <comment>Align Center</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandCheckSpelling" xml:space="preserve">
+    <value>拼寫檢查</value>
+    <comment>Check Spelling</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandCopy" xml:space="preserve">
+    <value>復制</value>
+    <comment>Copy</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandCut" xml:space="preserve">
+    <value>剪切</value>
+    <comment>Cut</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandForeColor" xml:space="preserve">
+    <value>前景色</value>
+    <comment>Fore Color</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandIndent" xml:space="preserve">
+    <value>缩进</value>
+    <comment>Indent</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandItalic" xml:space="preserve">
+    <value>]斜体</value>
+    <comment>Italic</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandJustify" xml:space="preserve">
+    <value>Justify</value>
+    <comment>Justify</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandLeft" xml:space="preserve">
+    <value>左對齊</value>
+    <comment>Align Left</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandOrderedList" xml:space="preserve">
+    <value>Ordered List</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandOutdent" xml:space="preserve">
+    <value>Outdent</value>
+    <comment>Outdent</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandPaste" xml:space="preserve">
+    <value>粘貼</value>
+    <comment>Paste</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandPasteRtf" xml:space="preserve">
+    <value>Paste from Word</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandPrint" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandRedo" xml:space="preserve">
+    <value>重做</value>
+    <comment>Redo</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandRemoveFormat" xml:space="preserve">
+    <value>Remove Format</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandRight" xml:space="preserve">
+    <value>右對齊</value>
+    <comment>Align Right</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandStrikethrough" xml:space="preserve">
+    <value>Strikethrough</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandSubscript" xml:space="preserve">
+    <value>Subscript</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandSuperscript" xml:space="preserve">
+    <value>Superscript</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandUnderline" xml:space="preserve">
+    <value>下劃線</value>
+    <comment>Underline</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandUndo" xml:space="preserve">
+    <value>撤消</value>
+    <comment>Undo</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.CommandUnlink" xml:space="preserve">
+    <value>移除聯接</value>
+    <comment>Remove Link</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.DesignViewTab" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.FontName" xml:space="preserve">
+    <value>Font Name</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.FontSize" xml:space="preserve">
+    <value>Font Size</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.HtmlViewTab" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_CreateThumbnail" xml:space="preserve">
+    <value>Create thumbnail</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_CustomSize" xml:space="preserve">
+    <value>Custom size</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_NewImageName" xml:space="preserve">
+    <value>New image name</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_OriginalSize" xml:space="preserve">
+    <value>Original image size</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_Pixels" xml:space="preserve">
+    <value>pixels</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_PositionCenter" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_PositionLeft" xml:space="preserve">
+    <value>Left-aligned</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_PositionRight" xml:space="preserve">
+    <value>Right-aligned</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_Size" xml:space="preserve">
+    <value>尺寸</value>
+    <comment>Size</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.ImageProps_Width" xml:space="preserve">
+    <value>寬度</value>
+    <comment>Width</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertImage" xml:space="preserve">
+    <value>插入圖片</value>
+    <comment>Insert Image</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertImage_EnterUrl" xml:space="preserve">
+    <value>Enter image web address</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertImage_FromLocal" xml:space="preserve">
+    <value>從本地文件</value>
+    <comment>From this computer</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertImage_FromWeb" xml:space="preserve">
+    <value>從網絡文件 (URL)</value>
+    <comment>From the web (URL)</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertImage_MoreOptions" xml:space="preserve">
+    <value>更多選項</value>
+    <comment>More options</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertImage_Preview" xml:space="preserve">
+    <value>圖片預覽</value>
+    <comment>Image preview</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertImage_SaveToServer" xml:space="preserve">
+    <value>Save file to this server</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertImage_UploadInstructions" xml:space="preserve">
+    <value>Browse your computer for the image file to upload</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertLink" xml:space="preserve">
+    <value>插入聯接</value>
+    <comment>Insert Link</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertLink_DisplayProperties" xml:space="preserve">
+    <value>Display Properties</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertLink_Email" xml:space="preserve">
+    <value>E-mail address</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertLink_EmailTo" xml:space="preserve">
+    <value>E-mail to</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertLink_OpenInNewWindow" xml:space="preserve">
+    <value>Open in new window</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertLink_Subject" xml:space="preserve">
+    <value>標題</value>
+    <comment>Subject</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertLink_Text" xml:space="preserve">
+    <value>文本</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertLink_ToolTip" xml:space="preserve">
+    <value>提示</value>
+    <comment>ToolTip</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.InsertLink_Url" xml:space="preserve">
+    <value>URL</value>
+    <comment>URL</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.Paragraph" xml:space="preserve">
+    <value>Paragraph</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.PasteRtf_Instructions" xml:space="preserve">
+    <value>Please paste inside the following box and hit OK.</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.PasteRtf_StripFont" xml:space="preserve">
+    <value>Strip font family</value>
+  </data>
+  <data name="ASPxHtmlEditorStringId.PreviewTab" xml:space="preserve">
+    <value>預覽</value>
+    <comment>Preview</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.RequiredFieldError" xml:space="preserve">
+    <value>不能為空</value>
+    <comment>This field is required</comment>
+  </data>
+  <data name="ASPxHtmlEditorStringId.SelectAll" xml:space="preserve">
+    <value>全選</value>
+    <comment>Select All</comment>
+  </data>
+  <data name="ASPxSpellCheckerStringId.AddToDictionaryButton" xml:space="preserve">
+    <value>Add to Dictionary</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.ChangeAllButton" xml:space="preserve">
+    <value>Change All</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.ChangeButton" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.ChangeTo" xml:space="preserve">
+    <value>Change To:</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.ChooseDictionary" xml:space="preserve">
+    <value>Choose which dictionary to use when checking your spelling.</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.CloseButton" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.FinishSpellChecking" xml:space="preserve">
+    <value>The spelling check is complete.</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.GeneralOptions" xml:space="preserve">
+    <value>General options</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.IgnoreAllButton" xml:space="preserve">
+    <value>Ignore All</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.IgnoreEmails" xml:space="preserve">
+    <value>Ignore e-mails</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.IgnoreMixedCase" xml:space="preserve">
+    <value>Ignore words in MiXeDcAsE</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.IgnoreNumbers" xml:space="preserve">
+    <value>Ignore words with numbers</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.IgnoreOnceButton" xml:space="preserve">
+    <value>Ignore Once</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.IgnoreTags" xml:space="preserve">
+    <value>Ignore markup tags</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.IgnoreUppercase" xml:space="preserve">
+    <value>Ignore words in UPPERCASE</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.IgnoreUrls" xml:space="preserve">
+    <value>Ignore URLs</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.InternationalDictionaries" xml:space="preserve">
+    <value>International dictionaries</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.Language" xml:space="preserve">
+    <value>Language:</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.NoSuggestionsText" xml:space="preserve">
+    <value>(No Suggestions)</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.NotInDictionary" xml:space="preserve">
+    <value>Not in Dictionary:</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.OkButton" xml:space="preserve">
+    <value>確定</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ASPxSpellCheckerStringId.OptionsButton" xml:space="preserve">
+    <value>Options...</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.OptionsFormCaption" xml:space="preserve">
+    <value>Spelling Options</value>
+  </data>
+  <data name="ASPxSpellCheckerStringId.SpellCheckFormCaption" xml:space="preserve">
+    <value>Check Spelling</value>
+  </data>
+</root>

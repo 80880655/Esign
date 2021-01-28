@@ -1,0 +1,11 @@
+﻿.zdlgbtn {	
+	  background:#bbb url(../../Images/ui.toolbar/vertical.gif) repeat-x 0 0;	       
+      padding:1px 3px 2px 3px !important; 
+      padding:2px 4px 1px 4px;
+      border:0px solid #888;
+      border-right:1px solid #888; border-bottom: 1px solid #888;
+      color:#000;          
+      height:20px;
+      text-align:center; 
+      cursor:hand;
+}

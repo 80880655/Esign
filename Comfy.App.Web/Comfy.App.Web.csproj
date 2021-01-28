@@ -1,0 +1,854 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26DA55CC-1E01-4974-A7B5-A01FD1DB1101}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Comfy.App.Web</RootNamespace>
+    <AssemblyName>Comfy.App.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SilverlightApplicationList>
+    </SilverlightApplicationList>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PublishDatabases>false</PublishDatabases>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.33242, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ASTreeView, Version=1.5.9.0, Culture=neutral, PublicKeyToken=521e0b4262a9001c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ASTreeView.dll</HintPath>
+    </Reference>
+    <Reference Include="CKEditor.NET, Version=3.6.2.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder, Version=2.1.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\export\YsYarnWHAutoRejection\bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\export\YsYarnWHAutoRejection\bin\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\export\YsYarnWHAutoRejection\bin\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\export\YsYarnWHAutoRejection\bin\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Aqua\Ext\ext-all.css" />
+    <Content Include="App_Themes\Aqua\Ext\images\panel\tool-sprites.gif" />
+    <Content Include="App_Themes\Aqua\Main\App\computer.png" />
+    <Content Include="App_Themes\Aqua\Main\App\gvPagerBottomPanelBackground.gif" />
+    <Content Include="App_Themes\Aqua\Main\App\leftTriangle.gif" />
+    <Content Include="App_Themes\Aqua\Main\App\Login_01.gif" />
+    <Content Include="App_Themes\Aqua\Main\App\Login_02.gif" />
+    <Content Include="App_Themes\Aqua\Main\App\Login_04.gif" />
+    <Content Include="App_Themes\Aqua\Main\App\Login_05.gif" />
+    <Content Include="App_Themes\Aqua\Main\App\logo.gif" />
+    <Content Include="App_Themes\Aqua\Main\App\logo1.gif" />
+    <Content Include="App_Themes\Aqua\Main\App\logo2.gif" />
+    <Content Include="App_Themes\Aqua\Main\App\pcCloseButton.png" />
+    <Content Include="App_Themes\Aqua\Main\App\rightTriangle.gif" />
+    <Content Include="App_Themes\Aqua\Main\App\Styles.css" />
+    <Content Include="App_Themes\Aqua\Main\App\top_bg.gif" />
+    <Content Include="App_Themes\Aqua\Main\RoundPanelNavigation\rpBottomLeftCorner.png" />
+    <Content Include="App_Themes\Aqua\Main\RoundPanelNavigation\rpBottomRightCorner.png" />
+    <Content Include="App_Themes\Aqua\Main\RoundPanelNavigation\rpContentBottomEdge.gif" />
+    <Content Include="App_Themes\Aqua\Main\RoundPanelNavigation\rpContentLeftEdge.gif" />
+    <Content Include="App_Themes\Aqua\Main\RoundPanelNavigation\rpContentRightEdge.gif" />
+    <Content Include="App_Themes\Aqua\Main\RoundPanelNavigation\rpNoHeaderTopEdge.gif" />
+    <Content Include="App_Themes\Aqua\Main\RoundPanelNavigation\rpNoHeaderTopLeftCorner.png" />
+    <Content Include="App_Themes\Aqua\Main\RoundPanelNavigation\rpNoHeaderTopRightCorner.png" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\Background.gif" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\BackgroundHover.gif" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\BackgroundPressed.gif" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\BackgroundSelected.gif" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\BottomLeftCorner.gif" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\BottomRightCorner.gif" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\LeftCorner.gif" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\MiddleBottom.gif" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\MiddleLeft.gif" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\MiddleRight.gif" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\MiddleTop.gif" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\SeparatorBackground.png" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\TopLeftCorner.gif" />
+    <Content Include="App_Themes\Aqua\Main\ToolBar\TopRightCorner.gif" />
+    <Content Include="App_Themes\Aqua\TabPanel\home.gif" />
+    <Content Include="App_Themes\Aqua\TabPanel\scroll-left.gif" />
+    <Content Include="App_Themes\Aqua\TabPanel\scroll-right.gif" />
+    <Content Include="App_Themes\Aqua\TabPanel\Styles.css" />
+    <Content Include="App_Themes\Aqua\TabPanel\tab-btm-inactive-left-bg.gif" />
+    <Content Include="App_Themes\Aqua\TabPanel\tab-btm-inactive-right-bg.gif" />
+    <Content Include="App_Themes\Aqua\TabPanel\tab-btm-left-bg.gif" />
+    <Content Include="App_Themes\Aqua\TabPanel\tab-btm-right-bg.gif" />
+    <Content Include="App_Themes\Aqua\TabPanel\tab-close.gif" />
+    <Content Include="App_Themes\Aqua\TabPanel\tab-strip-bg.gif" />
+    <Content Include="App_Themes\Aqua\TabPanel\tab-strip-btm-bg.gif" />
+    <Content Include="App_Themes\Aqua\TabPanel\tabs-sprite.gif" />
+    <Content Include="Css\demo.css" />
+    <Content Include="Css\easyui.css" />
+    <Content Include="Css\icon.css" />
+    <Content Include="Css\images\accordion_arrows.png" />
+    <Content Include="Css\images\blank.gif" />
+    <Content Include="Css\images\calendar_arrows.png" />
+    <Content Include="Css\images\combo_arrow.png" />
+    <Content Include="Css\images\datagrid_icons.png" />
+    <Content Include="Css\images\datebox_arrow.png" />
+    <Content Include="Css\images\layout_arrows.png" />
+    <Content Include="Css\images\linkbutton_bg.png" />
+    <Content Include="Css\images\loading.gif" />
+    <Content Include="Css\images\menu_arrows.png" />
+    <Content Include="Css\images\messager_icons.png" />
+    <Content Include="Css\images\pagination_icons.png" />
+    <Content Include="Css\images\panel_tools.png" />
+    <Content Include="Css\images\searchbox_button.png" />
+    <Content Include="Css\images\slider_handle.png" />
+    <Content Include="Css\images\spinner_arrows.png" />
+    <Content Include="Css\images\tabs_icons.png" />
+    <Content Include="Css\images\tree_icons.png" />
+    <Content Include="Css\images\validatebox_warning.png" />
+    <Content Include="QuailtyCode\exportCsv.aspx" />
+    <Content Include="GetShrinkageRisk.asmx" />
+    <Content Include="GettingDifferentWidth.asmx" />
+    <Content Include="Images\Icon\logo.png" />
+    <Content Include="Images\UserImages\ChangeRoomApply.JPG" />
+    <Content Include="Images\UserImages\DBAServerApply.JPG" />
+    <Content Include="Images\UserImages\DromRules.jpg" />
+    <Content Include="Images\UserImages\EquipmentMaintain.JPG" />
+    <Content Include="Images\UserImages\GuestRoomApply.JPG" />
+    <Content Include="Images\UserImages\LayLineApply.JPG" />
+    <Content Include="Images\UserImages\PcModifyApply.JPG" />
+    <Content Include="Images\UserImages\PhoneServerApply.JPG" />
+    <Content Include="Images\UserImages\QuarterApply.JPG" />
+    <Content Include="Images\UserImages\ServerFileApply.JPG" />
+    <Content Include="Images\UserImages\STTModifyApply.JPG" />
+    <Content Include="Index.aspx" />
+    <Content Include="QuailtyCode\ApproveQC.aspx" />
+    <Content Include="QuailtyCode\Attribute.ascx" />
+    <Content Include="QuailtyCode\AvaWidth.ascx" />
+    <Content Include="QuailtyCode\CreateQC.aspx" />
+    <Content Include="QuailtyCode\CustomerEditForm.ascx" />
+    <Content Include="QuailtyCode\DownLoadFile.aspx" />
+    <Content Include="QuailtyCode\EditQC.aspx" />
+    <Content Include="QuailtyCode\Edit_Ref.aspx" />
+    <Content Include="QuailtyCode\export.aspx" />
+    <Content Include="QuailtyCode\FlagAttribute.ascx" />
+    <Content Include="QuailtyCode\GetAjaxData.aspx" />
+    <Content Include="QuailtyCode\Modify_QC_HF_Log.aspx" />
+    <Content Include="QuailtyCode\NoPower.aspx" />
+    <Content Include="QuailtyCode\QueryQC.aspx" />
+    <Content Include="QuailtyCode\ReturnJson.aspx" />
+    <Content Include="QuailtyCode\SearchQC.aspx" />
+    <Content Include="QuailtyCode\TappingAttribute.ascx" />
+    <Content Include="QuailtyCode\TestAXInterface.aspx" />
+    <Content Include="Scripts\bin\ASTreeView.dll" />
+    <Content Include="Scripts\bin\CKEditor.NET.dll" />
+    <Content Include="Scripts\bin\CKFinder.dll" />
+    <Content Include="Core\UC\ToolBar.ascx" />
+    <Content Include="CreateFields.aspx" />
+    <Content Include="Css\portlets.css" />
+    <Content Include="Css\ui.zdialog.css" />
+    <Content Include="App_LocalResources\Attribute.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="Images\gvheaderbg.gif" />
+    <Content Include="Images\Accept1.png" />
+    <Content Include="Images\Error1.png" />
+    <Content Include="Images\green.jpg" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\menubg.gif" />
+    <Content Include="Images\nbCollapse.png" />
+    <Content Include="Images\nbExpand.png" />
+    <Content Include="Images\PLoading.gif" />
+    <Content Include="Images\rul1.bmp" />
+    <Content Include="Images\ToolBar\csv.png" />
+    <Content Include="Images\ToolBar\xls.png" />
+    <Content Include="Images\ui.zdialog\dialog_bg.jpg" />
+    <Content Include="Images\ui.zdialog\dialog_cb.png" />
+    <Content Include="Images\ui.zdialog\dialog_closebtn.gif" />
+    <Content Include="Images\ui.zdialog\dialog_closebtn.png" />
+    <Content Include="Images\ui.zdialog\dialog_closebtn_over.gif" />
+    <Content Include="Images\ui.zdialog\dialog_closebtn_over.png" />
+    <Content Include="Images\ui.zdialog\dialog_ct.png" />
+    <Content Include="Images\ui.zdialog\dialog_footercenter.png" />
+    <Content Include="Images\ui.zdialog\dialog_footerleft.png" />
+    <Content Include="Images\ui.zdialog\dialog_footerright.png" />
+    <Content Include="Images\ui.zdialog\dialog_lb.png" />
+    <Content Include="Images\ui.zdialog\dialog_lt.png" />
+    <Content Include="Images\ui.zdialog\dialog_mc.gif" />
+    <Content Include="Images\ui.zdialog\dialog_mc.png" />
+    <Content Include="Images\ui.zdialog\dialog_mlb.png" />
+    <Content Include="Images\ui.zdialog\dialog_mlm.png" />
+    <Content Include="Images\ui.zdialog\dialog_mlt.png" />
+    <Content Include="Images\ui.zdialog\dialog_mrb.png" />
+    <Content Include="Images\ui.zdialog\dialog_mrm.png" />
+    <Content Include="Images\ui.zdialog\dialog_mrt.png" />
+    <Content Include="Images\ui.zdialog\dialog_rb.png" />
+    <Content Include="Images\ui.zdialog\dialog_rt.png" />
+    <Content Include="Images\ui.zdialog\icon_alert.gif" />
+    <Content Include="Images\ui.zdialog\icon_dialog.gif" />
+    <Content Include="Images\ui.zdialog\icon_query.gif" />
+    <Content Include="Images\ui.zdialog\window.gif" />
+    <Content Include="Images\yellow.jpg" />
+    <Content Include="Notices.aspx" />
+    <Content Include="Scripts\bin\AjaxControlToolkit.dll" />
+    <Content Include="Css\jquery-ui.css" />
+    <Content Include="Images\h.jpg" />
+    <Content Include="Images\hide.gif" />
+    <Content Include="Images\msg.gif" />
+    <Content Include="Images\show.gif" />
+    <Content Include="Scripts\ccftag.js" />
+    <Content Include="Scripts\Combo.js" />
+    <Content Include="Scripts\DialogMove.js" />
+    <Content Include="Scripts\ext-all.js" />
+    <Content Include="Scripts\ext-base.js" />
+    <Content Include="Scripts\form.checker.js" />
+    <Content Include="Scripts\jquery-1[1].4.2.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.easyui.min.js" />
+    <Content Include="Scripts\jquery.move.js" />
+    <Content Include="Scripts\jquery.PrintArea.js" />
+    <Content Include="Scripts\jquery1.4.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\Silverlight.js" />
+    <Content Include="Scripts\tooltip.js" />
+    <Content Include="Scripts\Utilities.js" />
+    <Content Include="Scripts\zdialog.js" />
+    <Content Include="Scripts\ZZDialog.js" />
+    <Content Include="QuailtyCode\App_LocalResources\Attribute.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AjaxCallMethodOne.ashx" />
+    <None Include="Css\images\Thumbs.db" />
+    <None Include="Images\eWorks.ppt" />
+    <Content Include="Product.config" />
+    <None Include="Properties\PublishProfiles\123.pubxml" />
+    <None Include="Properties\PublishProfiles\EscmQuailtyCodeUAT.pubxml" />
+    <None Include="Properties\PublishProfiles\IIS UAT-gettestnt27.pubxml" />
+    <None Include="Properties\PublishProfiles\LocalHostIIS.pubxml" />
+    <None Include="Service References\WebReference3\Untitled.wsdl" />
+    <None Include="Web References\WebReference1\MailService.wsdl" />
+    <None Include="Web References\WebReference1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference\EmployeeInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebReference\LoginUser.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference\ServiceResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebReference\UserInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebReference\userService.disco" />
+    <None Include="Web References\WebReference1\MailService.disco" />
+    <None Include="Service References\WebReference3\configuration91.svcinfo" />
+    <None Include="Service References\WebReference3\configuration.svcinfo" />
+    <None Include="Service References\WebReference3\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxCallMethod.ashx.cs">
+      <DependentUpon>AjaxCallMethod.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxCallMethodOne.ashx.cs">
+      <DependentUpon>AjaxCallMethodOne.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxGetValue.ashx.cs">
+      <DependentUpon>AjaxGetValue.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ComfyUIWeb.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComfyUIWeb.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ErrorRes.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\FieldNameRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FieldNameRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\MainRes.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\TitleRes.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TitleRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UserControlRes.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserControlRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonClasss\ExcelHandle.cs" />
+    <Compile Include="Core\UC\ToolBar.ascx.cs">
+      <DependentUpon>ToolBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\UC\ToolBar.ascx.designer.cs">
+      <DependentUpon>ToolBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateFields.aspx.cs">
+      <DependentUpon>CreateFields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateFields.aspx.designer.cs">
+      <DependentUpon>CreateFields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\exportCsv.aspx.cs">
+      <DependentUpon>exportCsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\exportCsv.aspx.designer.cs">
+      <DependentUpon>exportCsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetShrinkageRisk.asmx.cs">
+      <DependentUpon>GetShrinkageRisk.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GettingDifferentWidth.asmx.cs">
+      <DependentUpon>GettingDifferentWidth.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notices.aspx.cs">
+      <DependentUpon>Notices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notices.aspx.designer.cs">
+      <DependentUpon>Notices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenericError.aspx.cs">
+      <DependentUpon>GenericError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenericError.aspx.designer.cs">
+      <DependentUpon>GenericError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Core\CookieKey.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Core\CacheManager.cs" />
+    <Compile Include="Core\CookieManager.cs" />
+    <Compile Include="QuailtyCode\ApproveQC.aspx.cs">
+      <DependentUpon>ApproveQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\ApproveQC.aspx.designer.cs">
+      <DependentUpon>ApproveQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\Attribute.ascx.cs">
+      <DependentUpon>Attribute.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\Attribute.ascx.designer.cs">
+      <DependentUpon>Attribute.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\AvaWidth.ascx.cs">
+      <DependentUpon>AvaWidth.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\AvaWidth.ascx.designer.cs">
+      <DependentUpon>AvaWidth.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\CreateQC.aspx.cs">
+      <DependentUpon>CreateQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\CreateQC.aspx.designer.cs">
+      <DependentUpon>CreateQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\CustomerEditForm.ascx.cs">
+      <DependentUpon>CustomerEditForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\CustomerEditForm.ascx.designer.cs">
+      <DependentUpon>CustomerEditForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\DownLoadFile.aspx.cs">
+      <DependentUpon>DownLoadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\DownLoadFile.aspx.designer.cs">
+      <DependentUpon>DownLoadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\EditQC.aspx.cs">
+      <DependentUpon>EditQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\EditQC.aspx.designer.cs">
+      <DependentUpon>EditQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\Edit_Ref.aspx.cs">
+      <DependentUpon>Edit_Ref.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\Edit_Ref.aspx.designer.cs">
+      <DependentUpon>Edit_Ref.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\export.aspx.cs">
+      <DependentUpon>export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\export.aspx.designer.cs">
+      <DependentUpon>export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\FlagAttribute.ascx.cs">
+      <DependentUpon>FlagAttribute.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\FlagAttribute.ascx.designer.cs">
+      <DependentUpon>FlagAttribute.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\GetAjaxData.aspx.cs">
+      <DependentUpon>GetAjaxData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\GetAjaxData.aspx.designer.cs">
+      <DependentUpon>GetAjaxData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\MastPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\Modify_QC_HF_Log.aspx.cs">
+      <DependentUpon>Modify_QC_HF_Log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\Modify_QC_HF_Log.aspx.designer.cs">
+      <DependentUpon>Modify_QC_HF_Log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\NoPower.aspx.cs">
+      <DependentUpon>NoPower.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\NoPower.aspx.designer.cs">
+      <DependentUpon>NoPower.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\QueryQC.aspx.cs">
+      <DependentUpon>QueryQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\QueryQC.aspx.designer.cs">
+      <DependentUpon>QueryQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\ReturnJson.aspx.cs">
+      <DependentUpon>ReturnJson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\ReturnJson.aspx.designer.cs">
+      <DependentUpon>ReturnJson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\SearchQC.aspx.cs">
+      <DependentUpon>SearchQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\SearchQC.aspx.designer.cs">
+      <DependentUpon>SearchQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\TappingAttribute.ascx.cs">
+      <DependentUpon>TappingAttribute.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\TappingAttribute.ascx.designer.cs">
+      <DependentUpon>TappingAttribute.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="QuailtyCode\TestAXInterface.aspx.cs">
+      <DependentUpon>TestAXInterface.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuailtyCode\TestAXInterface.aspx.designer.cs">
+      <DependentUpon>TestAXInterface.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WebReference3\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Login.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\HomeXMLDataSource.xml" />
+    <Content Include="Home.aspx" />
+    <Content Include="AjaxGetValue.ashx" />
+    <Content Include="AjaxCallMethod.ashx" />
+    <Content Include="App_Themes\Aqua\Login.skin" />
+    <None Include="App_Themes\Aqua\TabPanel\Thumbs.db" />
+    <None Include="Images\ui.zdialog\Thumbs.db" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Service.config" />
+    <None Include="Web References\WebReference\userService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Comfy.App.Core\Comfy.App.Core.csproj">
+      <Project>{B113A247-10AE-423A-9FDC-659C9F49D92E}</Project>
+      <Name>Comfy.App.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comfy.App\Comfy.App.csproj">
+      <Project>{861BF16D-6289-4A86-91DE-775E8392E474}</Project>
+      <Name>Comfy.App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comfy.Data\Comfy.Data.csproj">
+      <Project>{EF09D4EE-2134-4291-816D-B6C6339BC47E}</Project>
+      <Name>Comfy.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comfy.UI.WebControls\Comfy.UI.WebControls.csproj">
+      <Project>{EB199AAB-C461-4CA2-B1CD-6F88AAB1B8F0}</Project>
+      <Name>Comfy.UI.WebControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comfy.Utils\Comfy.Utils.csproj">
+      <Project>{6E0ED7F7-9C0C-418D-BE53-31B999C23DF4}</Project>
+      <Name>Comfy.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ComfyUIWeb.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ComfyUIWeb.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GenericError.aspx" />
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="App_LocalResources\GenericError.aspx.resx">
+    </Content>
+    <Content Include="Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ErrorRes.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ErrorRes.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\MainRes.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MainRes.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\TitleRes.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>TitleRes.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="FileNotFound.htm" />
+    <Content Include="Images\G01.gif" />
+    <Content Include="Images\G02.gif" />
+    <Content Include="Images\G03.gif" />
+    <Content Include="Images\G04.gif" />
+    <Content Include="Images\G05.gif" />
+    <Content Include="Images\G06.gif" />
+    <Content Include="Images\G07.gif" />
+    <Content Include="Images\G08.gif" />
+    <Content Include="Images\G09.gif" />
+    <Content Include="Images\G10.gif" />
+    <Content Include="Images\G11.gif" />
+    <Content Include="Images\G12.gif" />
+    <Content Include="Images\G13.gif" />
+    <Content Include="Images\G14.gif" />
+    <Content Include="Images\G15.gif" />
+    <Content Include="Images\G16.gif" />
+    <Content Include="Images\G17.gif" />
+    <Content Include="Images\G18.gif" />
+    <Content Include="NoAccess.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Default.aspx.resx">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Login.aspx.resx">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UserControlRes.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UserControlRes.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\FieldNameRes.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>FieldNameRes.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Images\Icon\AppHome.gif" />
+    <Content Include="Images\Icon\Config.gif" />
+    <Content Include="Images\Icon\Create.gif" />
+    <Content Include="Images\Icon\Current.gif" />
+    <Content Include="Images\Icon\Customize.gif" />
+    <Content Include="Images\Icon\Empty.gif" />
+    <Content Include="Images\Icon\Error.png" />
+    <Content Include="Images\Icon\Favorite.gif" />
+    <Content Include="Images\Icon\Help.gif" />
+    <Content Include="Images\Icon\HelpOnline.gif" />
+    <Content Include="Images\Icon\Home.gif" />
+    <Content Include="Images\Icon\Import.png" />
+    <Content Include="Images\Icon\Main.png" />
+    <Content Include="Images\Icon\Menu.gif" />
+    <Content Include="Images\Icon\New.gif" />
+    <Content Include="Images\Icon\Refresh.gif" />
+    <Content Include="Images\Icon\SideBar.gif" />
+    <Content Include="Images\Icon\Signout.gif" />
+    <Content Include="Images\Icon\Soon.gif" />
+    <Content Include="Images\Icon\Top.gif" />
+    <Content Include="Images\Icon\Update.gif" />
+    <Content Include="Images\Icon\User.gif" />
+    <Content Include="Images\Icon\Warning.gif" />
+    <Content Include="Images\ToolBar\Accept.png" />
+    <Content Include="Images\ToolBar\Clear.png" />
+    <Content Include="Images\ToolBar\Delete.png" />
+    <Content Include="Images\ToolBar\ClearDisabled.png" />
+    <Content Include="Images\ToolBar\Cutomize.png" />
+    <Content Include="Images\ToolBar\CutomizeDisabled.png" />
+    <Content Include="Images\ToolBar\DeleteDisabled.png" />
+    <Content Include="Images\ToolBar\Edit.png" />
+    <Content Include="Images\ToolBar\EditDisabled.png" />
+    <Content Include="Images\ToolBar\Export.png" />
+    <Content Include="Images\ToolBar\ExportDisabled.png" />
+    <Content Include="Images\ToolBar\Help.png" />
+    <Content Include="Images\ToolBar\HelpDisabled.png" />
+    <Content Include="Images\ToolBar\Import.png" />
+    <Content Include="Images\ToolBar\ImportDisabled.png" />
+    <Content Include="Images\ToolBar\New.png" />
+    <Content Include="Images\ToolBar\NewDisabled.png" />
+    <Content Include="Images\ToolBar\Search.png" />
+    <Content Include="Images\ToolBar\SearchDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Icon\AppForm.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Icon\Import.gif" />
+    <Content Include="Images\Icon\Notice.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WebReference3\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.184.101.12/authentication2/userService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference\</RelPath>
+      <UpdateFromURL>http://10.184.101.12/authentication2/userService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Comfy_App_Web_WebReference_UserService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.184.101.8/mailservice/MailService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference1\</RelPath>
+      <UpdateFromURL>http://10.184.101.8/mailservice/MailService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Comfy_App_Web_WebReference1_MailService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58826</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,173 @@
+﻿
+/*	body{color: #000; font-family: 宋体; font-size: 12px}
+	hr {COLOR: #B6CBE5; HEIGHT: 1px}
+	tr{font-family:宋体; font-size:12px;}
+	td {font-family: 宋体; font-size: 12px;word-break:break-all;}
+
+	table {font-size: 12.28px;color: #505050; border-collapse:collapse}
+	input {font-size: 12px;border: 1px solid #999999;}
+	textarea {BORDER-RIGHT: #A5ACB2 1px solid; BORDER-TOP: #A5ACB2 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #A5ACB2 1px solid; COLOR: #000000; BORDER-BOTTOM: #A5ACB2 1px solid; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #ffffff}
+	.myselect {background-color: #ffffff; border-bottom: #00309c 1px solid; border-left: #00309c 1px solid; border-right: #00309c 1px solid; border-top: #00309c 1px solid; font-size: 12px}
+	.mychkbox {background-color: #efefef; border-bottom: #aaaaaa 1px solid; border-left: #aaaaaa 1px solid; border-right: #aaaaaa 1px solid; border-top: #aaaaaa 1px solid;height: 12px;width: 12px;}
+	.mybutton {background-color: #efefef; border-bottom: #a9a9a9 1px solid; border-left: #a9a9a9 1px solid; border-right: #a9a9a9 1px solid; border-top: #a9a9a9 1px solid;color: #3d3d3d; font-size:16px;width:100px;height:20px;}
+	.inputLogin {font-size:14px;width:120px;height:24px;}
+	.inputSearch{font-size:14px;width:300px;height:24px;}
+	
+	.tablelist_title{background-color: #76aef0;color:#ffffff}
+	.tablelist_tr{background-color:#e8f4ff;}
+	.tablelist_td{BORDER-RIGHT: #76aef0 0.5pt solid;PADDING-RIGHT: 1px;BORDER-TOP: #76aef0 0.5pt solid;PADDING-LEFT: 1px;FONT-WEIGHT: 400;FONT-SIZE: 9pt;VERTICAL-ALIGN: middle;BORDER-LEFT: #76aef0 0.5pt solid;COLOR: windowtext;PADDING-TOP: 1px;BORDER-BOTTOM: #76aef0 0.5pt solid}
+*/
+tr.ed{
+	BACKGROUND-COLOR: #5982C2; filter:progid:DXImageTransform.microsoft.gradient(gradienttype=0,startColorStr=#5075B4,endColorStr=#78B1F3);
+	}
+td.ed {		
+	BORDER-RIGHT: #88A0CD 0.5pt solid;PADDING-RIGHT: 6px;
+	BORDER-TOP: #88A0CD 0.5pt solid;PADDING-TOP: 6px;
+	BORDER-LEFT: #88A0CD 0.5pt solid;PADDING-LEFT: 6px;
+	BORDER-BOTTOM: #88A0CD 0.5pt solid;PADDING-BOTTOM: 6px;
+	FONT-WEIGHT: 400;FONT-SIZE: 9pt;COLOR: windowtext;VERTICAL-ALIGN: middle;
+	background-color: #F6F6F6;
+}
+td.mtt {
+      /* BACKGROUND-COLOR: #B9D8FF;
+ filter:progid:DXImageTransform.microsoft.gradient(gradienttype=0,startColorStr=#F0F0EA,endColorStr=#D0E4FE);
+	BORDER-RIGHT: #76aef0 0.5pt solid;PADDING-RIGHT: 1px;
+	BORDER-TOP: #76aef0 0.5pt solid;PADDING-TOP: 1px;
+	BORDER-LEFT: #76aef0 0.5pt solid;PADDING-LEFT: 1px;
+	BORDER-BOTTOM: #76aef0 0.5pt solid;PADDING-BOTTOM: 1px;
+	background: url('<%=WebResource("Comfy.UI.WebControls.WebGridView.Images.gvheaderbg.gif")%>') repeat-x;FONT-WEIGHT: 400;FONT-SIZE: 8pt;COLOR: windowtext;*/
+  /*  VERTICAL-ALIGN: middle;white-space: nowrap;*/
+}
+
+table.tt {
+	border-width:1px;
+	border-style:solid;
+	border-spacing:0px;
+	border-color:#76aef0;
+	border-collapse:collapse;
+	FONT-WEIGHT: 400;
+	FONT-SIZE: 9pt;
+	VERTICAL-ALIGN: middle
+}
+
+td.tt {
+  /*	BORDER-RIGHT: #76aef0 0.5pt solid;PADDING-RIGHT: 1px;*/
+	FONT-WEIGHT: 400;FONT-SIZE: 9pt;COLOR: windowtext;VERTICAL-ALIGN: middle
+} 
+
+tr.tt {
+	/*要变更颜色时在tr中加入onMouseOver="this.className='tb'" onMouseOut="this.className='tt'"
+	background-color:#e8f4ff;
+	position:relative;
+	top:expression((this.offsetParent.scrollTop>this.parentElement.parentElement.offsetTop?this.offsetParent.scrollTop-this.parentElement.parentElement.offsetTop-1:0)-1);*/
+	height:26px;
+} 
+
+
+tr.ta {
+	background-color:#dbe8f2
+} 
+
+tr.tc {
+	/*很好的代码，可惜CPU消耗太大，禁用*/
+	background-color:#e8f4ff;
+	onmouseover: expression(onmouseover=function(){this.style.backgroundColor ='#dbe8f2'});
+	onmouseout: expression(onmouseout=function(){this.style.backgroundColor ='#e8f4ff'});
+} 
+
+table.tb {
+	border-width:1px;
+	border-style:solid;
+	border-spacing:0px;
+	border-color:#88A0CD;
+	border-collapse:collapse;
+	FONT-WEIGHT: 400;
+	FONT-SIZE: 9pt;
+	VERTICAL-ALIGN: middle
+}
+
+td.tb {
+	BORDER-RIGHT: #88A0CD 0.5pt solid;PADDING-RIGHT: 1px;
+	BORDER-TOP: #88A0CD 0.5pt solid;PADDING-TOP: 1px;
+	BORDER-LEFT: #88A0CD 0.5pt solid;PADDING-LEFT: 1px;
+	BORDER-BOTTOM: #88A0CD 0.5pt solid;PADDING-BOTTOM: 1px;
+	FONT-WEIGHT: 400;FONT-SIZE: 9pt;COLOR: windowtext;VERTICAL-ALIGN: middle
+} 
+
+tr.tb {
+	background-color:expression((this.sectionRowIndex%2==0)?"#F6F6F6":"#FFFFFF") 
+}
+
+table.headpage {
+	border-width:1px;
+	border-style:solid;
+	border-spacing:0px;
+	border-color:#76aef0;
+	border-collapse:collapse;
+	FONT-WEIGHT: 400;
+	FONT-SIZE: 9pt;
+	VERTICAL-ALIGN: middle
+}
+.boxinput { color:#000099; border: 1 double #999999; font-size: 9pt }
+
+td.headpage {
+
+	FONT-WEIGHT: 600;FONT-SIZE:10pt;
+}
+
+.cellbgcolor{
+   
+    background-color:red;
+    
+ }
+ 
+ .blockDiv
+ {
+     display:none;
+     width:700px; 
+     background-color: #CFE3FB;
+     border-style:solid;
+     border-width:1px;
+     border-color:#76aef0;
+     padding:0;
+     margin:0 0 0 0;
+     z-index:5;
+ }
+     
+ .blockDivHeader
+ {
+     width:670px;
+     height:27px;
+     cursor:move;
+     BACKGROUND-COLOR:#7FC8F1; 
+     padding:0;
+     margin:0;  
+    /* border-bottom: solid 1px #8BB6EF;*/
+  }
+  
+  .gridFootDiv
+  {
+     /* border-bottom:solid 1px #A3C0E8;border-left:solid 1px #A3C0E8;border-right:solid 1px #A3C0E8;background-color:#C8DFFF;*/
+      margin:0;padding:0;height:10%;
+      border-left:solid 1px #A3C0E8;border-right:solid 1px #A3C0E8;
+      
+   }
+   
+  .gridFootDivNoWidth
+  {
+     /* border-bottom:solid 1px #A3C0E8;border-left:solid 1px #A3C0E8;border-right:solid 1px #A3C0E8;background-color:#C8DFFF;*/
+      margin:0;padding:0;height:10%;
+      
+   }
+      
+   .gridBodyDiv
+   {
+       border-top:solid 1px #A3C0E8;border-left:solid 1px #A3C0E8;border-right:solid 1px #A3C0E8;
+       
+       }
+      
+       
+  .allGridDiv
+  {
+      border:1px solid #A3C0E8;
+      }

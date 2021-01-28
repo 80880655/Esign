@@ -1,0 +1,2158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://xmlns.example.com/1437128143579" xmlns:ns4="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" xmlns:ns0="http://tempuri.org" xmlns:ns3="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" xmlns:ns1="http://www.tibco.com/schemas/VN/Resources/Schemas/Schema.xsd" name="Untitled" targetNamespace="http://xmlns.example.com/1437128143579" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns="http://www.tibco.com/schemas/VN/Resources/Schemas/Schema.xsd" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.tibco.com/schemas/VN/Resources/Schemas/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="resp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ns1:result" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="result" type="xs:boolean" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="XppObjectBase" />
+      <xs:element name="XppObjectBase" nillable="true" type="tns:XppObjectBase" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://tempuri.org" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" />
+      <xs:element name="TEX_CommonInterfaceServicesPushDCAItemMasterRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdKMISDCAItemMasterRequest" nillable="true" type="ns4:TEX_AxdKMISDCAItemMasterRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushDCAItemMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushFabricRequestRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_PPOHD" nillable="true" type="ns4:TEX_AxdPPOHD" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushFabricRequestResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushInventTableRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdInventTable" nillable="true" type="ns4:TEX_AxdInventTable" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushInventTableResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushKMISGreigeItemDlvRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdGreigeItemArrivalRequest" nillable="true" type="ns4:TEX_AxdGreigeItemArrivalRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushKMISGreigeItemDlvResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushKMISLabDipInfoRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_axdLabDipColorRequest" nillable="true" type="ns4:TEX_AxdLabDipColorRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushKMISLabDipInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushKMISMasterRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdKMISRequest" nillable="true" type="ns4:TEX_AxdKMISRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushKMISMasterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushKMISYarnReceiptRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdYarnArrivalRequest" nillable="true" type="ns4:TEX_AxdYarnArrivalRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushKMISYarnReceiptResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORADCAItemArrivalRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdORAItemArrivalRequest" nillable="true" type="ns4:TEX_AxdORADCAItemArrivalRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORADCAItemArrivalResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORAExchRateTableRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdORAExchRateRequest" nillable="true" type="ns4:TEX_AxdORAExchRateRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORAExchRateTableResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORAFinanceDimensionRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdORAFinanceDimensionRequest" nillable="true" type="ns4:TEX_AxdORAFinanceDimensionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORAFinanceDimensionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORASegmentTableRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdORASegmentRequest" nillable="true" type="ns4:TEX_AxdORASegmentRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORASegmentTableResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORASupplierSiteRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdORASupplierSiteRequest" nillable="true" type="ns4:TEX_AxdORASupplierSiteRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORASupplierSiteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORASupplierTableRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdORASupplierRequest" nillable="true" type="ns4:TEX_AxdORASupplierRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORASupplierTableResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORATaxCodeRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdORATaxCodeRequest" nillable="true" type="ns4:TEX_AxdORATaxCodeRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORATaxCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORAVendPaymentTermRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_AxdORAVendPaymentTermRequest" nillable="true" type="ns4:TEX_AxdORAVendPaymentTermRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TEX_CommonInterfaceServicesPushORAVendPaymentTermResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" nillable="true" type="ns4:ESQ_CommonWebServiceMsg" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xs:complexType name="ArrayOfTEX_AxdFNRecipeDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdFNRecipeDetail" nillable="true" type="tns:TEX_AxdFNRecipeDetail" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdFNRecipeMain">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdFNRecipeMain" nillable="true" type="tns:TEX_AxdFNRecipeMain" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdFabCombo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdFabCombo" nillable="true" type="tns:TEX_AxdFabCombo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdGreigeItemArrivalLine">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdGreigeItemArrivalLine" nillable="true" type="tns:TEX_AxdGreigeItemArrivalLine" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdGreigeItemArrivalTable">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdGreigeItemArrivalTable" nillable="true" type="tns:TEX_AxdGreigeItemArrivalTable" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdKMISConstruction">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdKMISConstruction" nillable="true" type="tns:TEX_AxdKMISConstruction" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdKMISDCAItemMaster">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdKMISDCAItemMaster" nillable="true" type="tns:TEX_AxdKMISDCAItemMaster" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdKMISDyeMethod">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdKMISDyeMethod" nillable="true" type="tns:TEX_AxdKMISDyeMethod" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdKMISFinishing">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdKMISFinishing" nillable="true" type="tns:TEX_AxdKMISFinishing" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdKMISYarnBasalComp">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdKMISYarnBasalComp" nillable="true" type="tns:TEX_AxdKMISYarnBasalComp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdKMISYarnBasalProcess">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdKMISYarnBasalProcess" nillable="true" type="tns:TEX_AxdKMISYarnBasalProcess" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdKMISYarnComp">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdKMISYarnComp" nillable="true" type="tns:TEX_AxdKMISYarnComp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdKMISYarnContent">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdKMISYarnContent" nillable="true" type="tns:TEX_AxdKMISYarnContent" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdKMISYarnCount">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdKMISYarnCount" nillable="true" type="tns:TEX_AxdKMISYarnCount" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdKMISYarnProcess">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdKMISYarnProcess" nillable="true" type="tns:TEX_AxdKMISYarnProcess" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdKMISYarnProduct">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdKMISYarnProduct" nillable="true" type="tns:TEX_AxdKMISYarnProduct" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdKMISYarnTypeMapping">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdKMISYarnTypeMapping" nillable="true" type="tns:TEX_AxdKMISYarnTypeMapping" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORABusinessUnit">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORABusinessUnit" nillable="true" type="tns:TEX_AxdORABusinessUnit" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORACostCenter">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORACostCenter" nillable="true" type="tns:TEX_AxdORACostCenter" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORADCAItemArrivalLine">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORADCAItemArrivalLine" nillable="true" type="tns:TEX_AxdORADCAItemArrivalLine" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORADCAItemArrivalTable">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORADCAItemArrivalTable" nillable="true" type="tns:TEX_AxdORADCAItemArrivalTable" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORAEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORAEntity" nillable="true" type="tns:TEX_AxdORAEntity" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORAExchRate">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORAExchRate" nillable="true" type="tns:TEX_AxdORAExchRate" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORAInterco">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORAInterco" nillable="true" type="tns:TEX_AxdORAInterco" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORANaturalAccount">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORANaturalAccount" nillable="true" type="tns:TEX_AxdORANaturalAccount" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORASegment">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORASegment" nillable="true" type="tns:TEX_AxdORASegment" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORASpareOne">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORASpareOne" nillable="true" type="tns:TEX_AxdORASpareOne" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORASpareTwo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORASpareTwo" nillable="true" type="tns:TEX_AxdORASpareTwo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORASubCode">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORASubCode" nillable="true" type="tns:TEX_AxdORASubCode" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORASupplierSite">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORASupplierSite" nillable="true" type="tns:TEX_AxdORASupplierSite" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORASupplierTable">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORASupplierTable" nillable="true" type="tns:TEX_AxdORASupplierTable" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORATaxCode">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORATaxCode" nillable="true" type="tns:TEX_AxdORATaxCode" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdORAVendPaymentTerm">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdORAVendPaymentTerm" nillable="true" type="tns:TEX_AxdORAVendPaymentTerm" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdPDStdArtDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdPDStdArtDetail" nillable="true" type="tns:TEX_AxdPDStdArtDetail" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdPDStdArtMain">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdPDStdArtMain" nillable="true" type="tns:TEX_AxdPDStdArtMain" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdPDTechnicsDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdPDTechnicsDetail" nillable="true" type="tns:TEX_AxdPDTechnicsDetail" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdPDTechnicsMain">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdPDTechnicsMain" nillable="true" type="tns:TEX_AxdPDTechnicsMain" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdPPOItemSize">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdPPOItemSize" nillable="true" type="tns:TEX_AxdPPOItemSize" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdPPOXWashType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdPPOXWashType" nillable="true" type="tns:TEX_AxdPPOXWashType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdQCAvailableWidth">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdQCAvailableWidth" nillable="true" type="tns:TEX_AxdQCAvailableWidth" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdQCConstructionDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdQCConstructionDetails" nillable="true" type="tns:TEX_AxdQCConstructionDetails" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdQCCustomerLibrary">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdQCCustomerLibrary" nillable="true" type="tns:TEX_AxdQCCustomerLibrary" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdQCFinishDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdQCFinishDetails" nillable="true" type="tns:TEX_AxdQCFinishDetails" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdQCYarnDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdQCYarnDetails" nillable="true" type="tns:TEX_AxdQCYarnDetails" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdRTColorHeader">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdRTColorHeader" nillable="true" type="tns:TEX_AxdRTColorHeader" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdRTColorPrescribeHdr">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdRTColorPrescribeHdr" nillable="true" type="tns:TEX_AxdRTColorPrescribeHdr" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdViewKPPOCombo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdViewKPPOCombo" nillable="true" type="tns:TEX_AxdViewKPPOCombo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdViewKPPOComboLapdip">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdViewKPPOComboLapdip" nillable="true" type="tns:TEX_AxdViewKPPOComboLapdip" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdViewPPODT">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdViewPPODT" nillable="true" type="tns:TEX_AxdViewPPODT" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdViewPPOQCConstructionDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdViewPPOQCConstructionDetails" nillable="true" type="tns:TEX_AxdViewPPOQCConstructionDetails" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdViewPPOQCFinishDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdViewPPOQCFinishDetails" nillable="true" type="tns:TEX_AxdViewPPOQCFinishDetails" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdViewPPOQCMainInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdViewPPOQCMainInfo" nillable="true" type="tns:TEX_AxdViewPPOQCMainInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdViewPPOQCYarnDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdViewPPOQCYarnDetails" nillable="true" type="tns:TEX_AxdViewPPOQCYarnDetails" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdYarnArrivalLine">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdYarnArrivalLine" nillable="true" type="tns:TEX_AxdYarnArrivalLine" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTEX_AxdYarnArrivalTable">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TEX_AxdYarnArrivalTable" nillable="true" type="tns:TEX_AxdYarnArrivalTable" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ESQ_CommonWebServiceMsg">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="createDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdFNRecipeDetail">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="RecipeRate" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Sequence" type="xs:int" />
+              <xs:element minOccurs="0" name="chemicCode" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdFNRecipeMain">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="FNRecipeDetailList" nillable="true" type="tns:ArrayOfTEX_AxdFNRecipeDetail" />
+              <xs:element minOccurs="0" name="Iden" type="xs:int" />
+              <xs:element minOccurs="0" name="RecipeNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdFabCombo">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ViewKPPOComboLabdip" nillable="true" type="tns:ArrayOfTEX_AxdViewKPPOComboLapdip" />
+              <xs:element minOccurs="0" name="comboCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="comboName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="createDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="createUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="customerCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabComboId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabComboYear" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabricCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lastModiDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lastModiUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="layout" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="qualityCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="reqUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="seasonCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="technicalAlert" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdGreigeItemArrivalLine">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ColorDegree" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CottonSortNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="FabricWidth" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="GreigeLot" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="GreigeQuality" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Length" type="xs:decimal" />
+              <xs:element minOccurs="0" name="LengthFOC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="LineNum" type="xs:int" />
+              <xs:element minOccurs="0" name="PPONo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="RollNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="UnitCost" type="xs:decimal" />
+              <xs:element minOccurs="0" name="UnitIdLength" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="UnitIdWeight" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VendPackingSlipId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+              <xs:element minOccurs="0" name="WeightFOC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="inventBatchId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="qualityCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="yarnLot" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdGreigeItemArrivalRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ArrivalTable" nillable="true" type="tns:ArrayOfTEX_AxdGreigeItemArrivalTable" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdGreigeItemArrivalTable">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ArrivalLine" nillable="true" type="tns:ArrayOfTEX_AxdGreigeItemArrivalLine" />
+              <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LengthTotal" type="xs:decimal" />
+              <xs:element minOccurs="0" name="RollCountTtl" type="xs:int" />
+              <xs:element minOccurs="0" name="ShipmentDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="UnitIdLength" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="UnitIdWeight" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VendAccount" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VendPackingSlipId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="WeightTotal" type="xs:decimal" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdInventTable">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ApprovalDateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Approver" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="AvailableWidth" nillable="true" type="tns:ArrayOfTEX_AxdQCAvailableWidth" />
+              <xs:element minOccurs="0" name="ConstructionDetails" nillable="true" type="tns:ArrayOfTEX_AxdQCConstructionDetails" />
+              <xs:element minOccurs="0" name="CustomerLibrary" nillable="true" type="tns:ArrayOfTEX_AxdQCCustomerLibrary" />
+              <xs:element minOccurs="0" name="DCAOracleId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DCAOracleName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DCAType" type="tns:TEX_DCAType" />
+              <xs:element minOccurs="0" name="DCAUnit" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DCAUsable" type="xs:boolean" />
+              <xs:element minOccurs="0" name="DyeMethodId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="FinishDetails" nillable="true" type="tns:ArrayOfTEX_AxdQCFinishDetails" />
+              <xs:element minOccurs="0" name="GramWeightAfterWash" type="xs:decimal" />
+              <xs:element minOccurs="0" name="GramWeightBeforeWash" type="xs:decimal" />
+              <xs:element minOccurs="0" name="InventLayout" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="InventSourcing" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="InventStatus" type="tns:TEX_InventStatus" />
+              <xs:element minOccurs="0" name="IsGarmentWashStr" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="KnitAnalysisNum" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="MaterialGroup" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PatternId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ProdType" type="tns:TEX_ProdType" />
+              <xs:element minOccurs="0" name="RefQualityCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ShrinkTestMethod" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Shrinkage" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SpecialType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="TDShrinkHPct" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TDShrinkLPct" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TappingMeasurement" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="TappingType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnDetails" nillable="true" type="tns:ArrayOfTEX_AxdQCYarnDetails" />
+              <xs:element minOccurs="0" name="YarnLength" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="timestamp" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="timestampPlainText" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="tokenId" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISConstruction">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ArtCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Construction" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ConstructionSingleDouble" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ConstructionTopAbbrCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DescriptionCH" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DescriptionEN" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsSpecial" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Priority" type="xs:decimal" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISDCAItemMaster">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Bit" type="xs:int" />
+              <xs:element minOccurs="0" name="EnglishChemicName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="EnglishDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ItemCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="chemicCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="chemicDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="chemicName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="chemicType" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISDCAItemMasterRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="DCAItemMaster" nillable="true" type="tns:ArrayOfTEX_AxdKMISDCAItemMaster" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISDyeMethod">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DyeMethodId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DyeType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StandardCode" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISFinishing">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="FinishingCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="FinishingName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="FinishingProdType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="InventColorId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsWashing" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PhysicalFinishType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="RouteOprId" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Construction" nillable="true" type="tns:ArrayOfTEX_AxdKMISConstruction" />
+              <xs:element minOccurs="0" name="DyeMethod" nillable="true" type="tns:ArrayOfTEX_AxdKMISDyeMethod" />
+              <xs:element minOccurs="0" name="Finishing" nillable="true" type="tns:ArrayOfTEX_AxdKMISFinishing" />
+              <xs:element minOccurs="0" name="YarnBasalComp" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnBasalComp" />
+              <xs:element minOccurs="0" name="YarnBasalProcess" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnBasalProcess" />
+              <xs:element minOccurs="0" name="YarnComp" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnComp" />
+              <xs:element minOccurs="0" name="YarnContent" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnContent" />
+              <xs:element minOccurs="0" name="YarnCount" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnCount" />
+              <xs:element minOccurs="0" name="YarnProcess" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnProcess" />
+              <xs:element minOccurs="0" name="YarnProduct" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnProduct" />
+              <xs:element minOccurs="0" name="YarnTypeMapping" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnTypeMapping" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISYarnBasalComp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CompositionCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DescriptionCH" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DescriptionEN" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISYarnBasalProcess">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="DescriptionCH" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DescriptionEN" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ProcessId" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISYarnComp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="BasalComposition1" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="BasalComposition2" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="BasalComposition3" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="BasalComposition4" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="BasalComposition5" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CompositionCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DescriptionCH" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DescriptionEN" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISYarnContent">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnContentCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnContentPct1" type="xs:decimal" />
+              <xs:element minOccurs="0" name="YarnContentPct2" type="xs:decimal" />
+              <xs:element minOccurs="0" name="YarnContentPct3" type="xs:decimal" />
+              <xs:element minOccurs="0" name="YarnContentPct4" type="xs:decimal" />
+              <xs:element minOccurs="0" name="YarnContentPct5" type="xs:decimal" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISYarnCount">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="KMISYarnCountId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="TwistDirection" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnActualCount" type="xs:decimal" />
+              <xs:element minOccurs="0" name="YarnCountId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnCountNumber" type="xs:decimal" />
+              <xs:element minOccurs="0" name="YarnCountUnit" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnNumber" type="xs:decimal" />
+              <xs:element minOccurs="0" name="YarnThreads" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISYarnProcess">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="DescriptionCH" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DescriptionEN" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="TDProcess" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnBasalProcess1" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnBasalProcess2" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnBasalProcess3" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnBasalProcess4" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnBasalProcess5" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISYarnProduct">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="DescriptionCH" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DescriptionEN" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="TDModelNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnProductType" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdKMISYarnTypeMapping">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CompositionCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="TDModelNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="TDProcess" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnContent" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnContentCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnTypeId" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdLabDipColorRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="FNRecipeList" nillable="true" type="tns:ArrayOfTEX_AxdFNRecipeMain" />
+              <xs:element minOccurs="0" name="LabDipRecipeList" nillable="true" type="tns:ArrayOfTEX_AxdRTColorHeader" />
+              <xs:element minOccurs="0" name="PDStdArtList" nillable="true" type="tns:ArrayOfTEX_AxdPDStdArtMain" />
+              <xs:element minOccurs="0" name="PDTechnicsList" nillable="true" type="tns:ArrayOfTEX_AxdPDTechnicsMain" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORABusinessUnit">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="BusinessUnitId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ChineseDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Enabled" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EnglishDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LastUpdatedDateByOracle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedUserByOracle" type="xs:int" />
+              <xs:element minOccurs="0" name="Posting" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORACostCenter">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ChineseDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CostCenterId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Enabled" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EnglishDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LastUpdatedDateByOracle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedUserByOracle" type="xs:int" />
+              <xs:element minOccurs="0" name="Posting" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORADCAItemArrivalLine">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DCAOracleCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ExpiryDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LineNum" type="xs:int" />
+              <xs:element minOccurs="0" name="QtyPack" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QtyUnit" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SupplierLot" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="UnitCost" type="xs:decimal" />
+              <xs:element minOccurs="0" name="UnitId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="UnitIdPack" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VendPackingSlipId" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORADCAItemArrivalRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ItemArrivalTable" nillable="true" type="tns:ArrayOfTEX_AxdORADCAItemArrivalTable" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORADCAItemArrivalTable">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ArrivalDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ItemArrivalLine" nillable="true" type="tns:ArrayOfTEX_AxdORADCAItemArrivalLine" />
+              <xs:element minOccurs="0" name="QtyPackTtl" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QtyUnitTtl" type="xs:decimal" />
+              <xs:element minOccurs="0" name="UnitId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="UnitIdPack" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VendAccount" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VendPackingSlipId" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORAEntity">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ChineseDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Enabled" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EnglishDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LastUpdatedDateByOracle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedUserByOracle" type="xs:int" />
+              <xs:element minOccurs="0" name="Posting" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORAExchRate">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ExchRate" type="xs:decimal" />
+              <xs:element minOccurs="0" name="ExchRateType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="FromCurrency" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="RateDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TimestampEncrypted" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="TimestampPlain" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ToCurrency" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="TokenId" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORAExchRateRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ExchRateList" nillable="true" type="tns:ArrayOfTEX_AxdORAExchRate" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORAFinanceDimensionRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="BusinessUnitList" nillable="true" type="tns:ArrayOfTEX_AxdORABusinessUnit" />
+              <xs:element minOccurs="0" name="CostCenterList" nillable="true" type="tns:ArrayOfTEX_AxdORACostCenter" />
+              <xs:element minOccurs="0" name="EntityList" nillable="true" type="tns:ArrayOfTEX_AxdORAEntity" />
+              <xs:element minOccurs="0" name="IntercoList" nillable="true" type="tns:ArrayOfTEX_AxdORAInterco" />
+              <xs:element minOccurs="0" name="NaturalAccountList" nillable="true" type="tns:ArrayOfTEX_AxdORANaturalAccount" />
+              <xs:element minOccurs="0" name="SpareOneList" nillable="true" type="tns:ArrayOfTEX_AxdORASpareOne" />
+              <xs:element minOccurs="0" name="SpareTwoList" nillable="true" type="tns:ArrayOfTEX_AxdORASpareTwo" />
+              <xs:element minOccurs="0" name="SubcodeList" nillable="true" type="tns:ArrayOfTEX_AxdORASubCode" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORAInterco">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ChineseDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Enabled" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EnglishDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IntercoId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LastUpdatedDateByOracle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedUserByOracle" type="xs:int" />
+              <xs:element minOccurs="0" name="Posting" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORANaturalAccount">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Currency" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DBCRProposal" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DBCRRequirement" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Enabled" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ExchangeRateType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LastUpdatedDateByOracle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedUserByOracle" type="xs:int" />
+              <xs:element minOccurs="0" name="MainAccountCategory" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="MainAccountChineseName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="MainAccountEnglishName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ManualEntry" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="NaturalAccountId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Posting" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORASegment">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ActiveFrom" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ActiveTo" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="BusinessUnitId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CombinationId" type="xs:int" />
+              <xs:element minOccurs="0" name="CostCenterId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IntercoId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LastUpdatedDateByOracle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedUserByOracle" type="xs:int" />
+              <xs:element minOccurs="0" name="MainAccount" type="xs:int" />
+              <xs:element minOccurs="0" name="MainAccountType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="NaturalAccountId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Posting" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SpareOneId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SpareTwoId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SubcodeId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Suspended" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORASegmentRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SegmentList" nillable="true" type="tns:ArrayOfTEX_AxdORASegment" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORASpareOne">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ChineseDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Enabled" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EnglishDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LastUpdatedDateByOracle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedUserByOracle" type="xs:int" />
+              <xs:element minOccurs="0" name="Posting" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SpareOneId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORASpareTwo">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ChineseDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Enabled" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EnglishDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LastUpdatedDateByOracle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedUserByOracle" type="xs:int" />
+              <xs:element minOccurs="0" name="Posting" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SpareTwoId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORASubCode">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ChineseDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Enabled" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EnglishDescription" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LastUpdatedDateByOracle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedUserByOracle" type="xs:int" />
+              <xs:element minOccurs="0" name="Posting" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SubcodeId" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORASupplierRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Supplier" nillable="true" type="tns:ArrayOfTEX_AxdORASupplierTable" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORASupplierSite">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ActiveFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="AddressLine1" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="AddressLine2" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="AddressLine3" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="AddressLine4" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="AddressLineAlt" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="AreaCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CreateUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="FaxAreaCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="InvoiceCurrencyCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LastModiDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastModiUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="OrgId" type="xs:int" />
+              <xs:element minOccurs="0" name="PaySiteFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PayTermCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentCurrencyCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentMethodLookupCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Province" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PurchasingSiteFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SupplierCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SupplierSiteCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Telex" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VATCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VATRate" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VendorSiteCodeAlt" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VendorSiteId" type="xs:int" />
+              <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORASupplierSiteRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SupplierSite" nillable="true" type="tns:ArrayOfTEX_AxdORASupplierSite" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORASupplierTable">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Active" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Adress1" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Adress2" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CCY_CD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Contact_Person" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Country_CD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="FaxNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Internal_Flag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Pay_Term_CD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Ship_Mode_CD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Ship_Term_CD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Short_Name" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Supplier_CD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Telephone_No" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VendorId" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORATaxCode">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Active" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CreateUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LastModiDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastModiUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="OrgId" type="xs:int" />
+              <xs:element minOccurs="0" name="TaxId" type="xs:int" />
+              <xs:element minOccurs="0" name="TaxRate" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TaxType" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORATaxCodeRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TaxCode" nillable="true" type="tns:ArrayOfTEX_AxdORATaxCode" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORAVendPaymentTerm">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Active" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PayTermCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PayTermDescUS" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PayTermDescZHS" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdORAVendPaymentTermRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="VendPaymentTerm" nillable="true" type="tns:ArrayOfTEX_AxdORAVendPaymentTerm" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdPDStdArtDetail">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ChemicCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ChemicName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DCRRate" type="xs:decimal" />
+              <xs:element minOccurs="0" name="ExtraBatchRemark" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StandardDesc" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StandardTime" type="xs:decimal" />
+              <xs:element minOccurs="0" name="standardCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="step" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdPDStdArtMain">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CalefactionNum" type="xs:decimal" />
+              <xs:element minOccurs="0" name="InNum" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PDStdArtDetailList" nillable="true" type="tns:ArrayOfTEX_AxdPDStdArtDetail" />
+              <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="RunTime" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SpecialArt" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="TechnicsNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Temperature" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TotalTime" type="xs:decimal" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdPDTechnicsDetail">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ArtStep" type="xs:int" />
+              <xs:element minOccurs="0" name="ChemicCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Chroma" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Code" type="xs:int" />
+              <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Scale" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StepNo" type="xs:int" />
+              <xs:element minOccurs="0" name="Temperature" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="step" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdPDTechnicsMain">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PDTechnicsDetailList" nillable="true" type="tns:ArrayOfTEX_AxdPDTechnicsDetail" />
+              <xs:element minOccurs="0" name="TechSc" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TechnicsNo" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdPPOHD">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CCYCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="FabCombo" nillable="true" type="tns:ArrayOfTEX_AxdFabCombo" />
+              <xs:element minOccurs="0" name="GONo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="GOTS" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPCStatus" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPODate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOItemSize" nillable="true" type="tns:ArrayOfTEX_AxdPPOItemSize" />
+              <xs:element minOccurs="0" name="PPONo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPORevNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOXWashType" nillable="true" type="tns:ArrayOfTEX_AxdPPOXWashType" />
+              <xs:element minOccurs="0" name="PPOyear" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SAMGroupCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VMIFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ViewKPPOCombo" nillable="true" type="tns:ArrayOfTEX_AxdViewKPPOCombo" />
+              <xs:element minOccurs="0" name="ViewPPOQCMainInfo" nillable="true" type="tns:ArrayOfTEX_AxdViewPPOQCMainInfo" />
+              <xs:element minOccurs="0" name="YPDRelSign" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="attachment" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="billToPartyCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="brandCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="buyerGroupCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="buyerGroupRevReason" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="chargeMethod" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="collarCuffUOM" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="createDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="createUserGroupId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="createUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="custLabelCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="custSubDept" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="customerCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="customerSeason" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="downloadFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabPercentOverAllowed" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabPercentShortAllowed" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabricNatureCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="featureCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="finalGarmentFactoryCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="flag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="flgDirectFabricSales" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ftyContact" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="gmtSampleTypeCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="gmtTradeTerm" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="hardLinkFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="isGarmentWash" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="isReplenishment" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lastModiDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lastModiUserGroupId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lastModiUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="mocFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="needMatchingFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="needShipmentSample" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="newKPPOFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="opaFactoryCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="opaFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="orderType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="orgCreateUserGroupId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="orgFinalGarmentFactoryCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="orgOpaFactoryCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="orgReqUserGroupId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="orgSAMGroupCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="payTermCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="payTo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="percentOverAllowed" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="percentShortAllowed" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="preBookYarn" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="pressingMethod" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="printingFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="programNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="projectNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="regionCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="replenishmentReasonCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="replenishmentReasonDesc" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="reqUserGroupId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="reqUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="sampleType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="seasonCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="shipModeCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="shipTermCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="shipmentOSAllowance" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="shortLeadtimeFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="sourceNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="styleNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="supplierCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="swatchReceiver" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="swatchRequest" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="testReport" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="trimFabFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="washDevelopNo" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdPPOItemSize">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PPOItemId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="itemSizeId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="sizeCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="sizeMeasurement" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdPPOXWashType">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PPONo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Seq" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="WashCategory" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="WashTypeCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="WashTypeDesc" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdQCAvailableWidth">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Diameter" type="xs:int" />
+              <xs:element minOccurs="0" name="Gauge" type="xs:int" />
+              <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="MaxWidth" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TotalNeedles" type="xs:int" />
+              <xs:element minOccurs="0" name="Width" type="xs:decimal" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdQCConstructionDetails">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ConstructionId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdQCCustomerLibrary">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="BrandId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CustBuyerId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CustMillComments" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CustQualityId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CustSalesGroup" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CustSalesId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsFirstOwnerStr" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdQCFinishDetails">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="FinishingCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdQCYarnDetails">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnCompositionId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnCountId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnDensity" type="xs:decimal" />
+              <xs:element minOccurs="0" name="YarnRatio" type="xs:decimal" />
+              <xs:element minOccurs="0" name="YarnThreads" type="xs:int" />
+              <xs:element minOccurs="0" name="YarnTypeId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnWarpWeftType" type="tns:TEX_YarnWarpWeftType" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdRTColorHeader">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ActualLaundering" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Apperance" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Blue" type="xs:int" />
+              <xs:element minOccurs="0" name="BodyFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CTLD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ChlorineUV" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ChlorineWater" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ChlorineWith" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ColorCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ColorDegree" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ColorName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ColorShort" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ColorStandard" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Completed" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Construction" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CustAccount" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DryGrind" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DryWash" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DyeMethod" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ExistBulk" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="FinishingMethod" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Green" type="xs:int" />
+              <xs:element minOccurs="0" name="Hydrolyze" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsSample" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LampHouse" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LaunderFastness1" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LaunderFastness2" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Light" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="OxygenBlanch" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PerformanceCare" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PerspirateFastness1" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PerspirateFastness2" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Red" type="xs:int" />
+              <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Request" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SampleNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Season" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Sequence" type="xs:int" />
+              <xs:element minOccurs="0" name="Shade" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SolarizeAche" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SolarizeAlkali" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StyleNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="WaterFastness1" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="WaterFastness2" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="WetCrocking" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnCount" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="prescribeHeaderList" nillable="true" type="tns:ArrayOfTEX_AxdRTColorPrescribeHdr" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdRTColorPrescribeHdr">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="BackHandled" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ChemicCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ChemicName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DisperseDyesGroup" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="DosageUnit" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="FinishingName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="FrontHandled" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Iden" type="xs:int" />
+              <xs:element minOccurs="0" name="IngredientCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="MaxVersion" type="xs:int" />
+              <xs:element minOccurs="0" name="ReactiveDyesGroup" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ReactiveDyesGroupCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StepCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="StepCount" type="xs:int" />
+              <xs:element minOccurs="0" name="StepId" type="xs:int" />
+              <xs:element minOccurs="0" name="colorCode" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdViewKPPOCombo">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CCYCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOComboRemark" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOComboStatus" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOItemId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOItemStatus" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPONo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="UOMCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ViewPPODT" nillable="true" type="tns:ArrayOfTEX_AxdViewPPODT" />
+              <xs:element minOccurs="0" name="YPD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="apacOrderFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="comboName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="componentPart" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="createDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="createUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabComboId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabricCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabricTypeCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabricWidth" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="gmtColorCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="itemComboId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="qualityCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="technicalAlert" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="varRate" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdViewKPPOComboLapdip">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="blue" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="buyerComment" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="colorStandard" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="createDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="createUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="customerCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="customerColorName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabComboId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="green" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="groupNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lapdipApprovalDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lapdipColorName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lapdipId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lapdipLibraryId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lapdipPPONo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lapdipReqNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lapdipReqSeq" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lapdipYear" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lastModiDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lastModiUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="millColorCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="red" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="reqFabrication" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="seasonCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="seq" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="shade" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdViewPPODT">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CCYCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOItemId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPONo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="SLTFlag" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="UOMCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="buyerPODate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="destinationCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabComboId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="fabDelDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="factoryDeliveryDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="gmtQty" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="itemComboId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="itemLotDTId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="itemLotHDId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="itemSizeId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lotHDRemark" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lotNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lotTypeCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="onHold" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="orderQty" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="planProdCompDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="shipModeCD" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="unitPrice" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdViewPPOQCConstructionDetails">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Iden" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOItemId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPONo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOQCId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="construction" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="qualityCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdViewPPOQCFinishDetails">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Iden" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOItemId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPONo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOQCId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="finishingCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="qualityCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdViewPPOQCMainInfo">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="AFGmmm" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="BFGmmm" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ConstructionDetails" nillable="true" type="tns:ArrayOfTEX_AxdViewPPOQCConstructionDetails" />
+              <xs:element minOccurs="0" name="FinishDetails" nillable="true" type="tns:ArrayOfTEX_AxdViewPPOQCFinishDetails" />
+              <xs:element minOccurs="0" name="PPOItemId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPONo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOQCId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnDetails" nillable="true" type="tns:ArrayOfTEX_AxdViewPPOQCYarnDetails" />
+              <xs:element minOccurs="0" name="analysisNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="approveDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="approver" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="createDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="createUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="dyeMethod" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="gmtWashing" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lastModiDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="lastModiUserId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="layout" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="materialGroup" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="measurement" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="pattern" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="refQualityCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="shrinkage" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="shrinkageTestingMethod" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="sourcing" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="tappingType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="yarnLength" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdViewPPOQCYarnDetails">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Iden" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOItemId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPONo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PPOQCId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="qualityCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="threads" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="warpWeft" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="yarnCount" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="yarnDensity" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="yarnRatio" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="yarnType" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdYarnArrivalLine">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ColorCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CottonSortNo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="MoistureRegain" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PPOIden" type="xs:int" />
+              <xs:element minOccurs="0" name="PPONo" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentTerm" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="QtyUnit" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QtyUnitFOC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="UnitCost" type="xs:decimal" />
+              <xs:element minOccurs="0" name="UnitId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VendPackingSlipId" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnCategory" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnComp" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnContent" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnCount" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnLot" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnProcessType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="YarnQuality" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="orderType" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdYarnArrivalRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ArrivalTable" nillable="true" type="tns:ArrayOfTEX_AxdYarnArrivalTable" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TEX_AxdYarnArrivalTable">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns3:XppObjectBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ArrivalLine" nillable="true" type="tns:ArrayOfTEX_AxdYarnArrivalLine" />
+              <xs:element minOccurs="0" name="DeliveryMethod" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="ShipmentDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VendAccount" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="VendPackingSlipId" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:simpleType name="TEX_DCAType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="D" />
+          <xs:enumeration value="H">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10
+                                </EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Z">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20
+                                </EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="TEX_InventStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="New" />
+          <xs:enumeration value="Developed">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10
+                                </EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Approved">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20
+                                </EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Disabled">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30
+                                </EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="TEX_ProdType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None" />
+          <xs:enumeration value="P01" />
+          <xs:enumeration value="P02" />
+          <xs:enumeration value="P03" />
+          <xs:enumeration value="P04" />
+          <xs:enumeration value="P05" />
+          <xs:enumeration value="P06" />
+          <xs:enumeration value="P07" />
+          <xs:enumeration value="P08" />
+          <xs:enumeration value="P09" />
+          <xs:enumeration value="P10" />
+          <xs:enumeration value="P11" />
+          <xs:enumeration value="P12" />
+          <xs:enumeration value="P13" />
+          <xs:enumeration value="P14" />
+          <xs:enumeration value="P15" />
+          <xs:enumeration value="P16" />
+          <xs:enumeration value="P17" />
+          <xs:enumeration value="P18" />
+          <xs:enumeration value="P19" />
+          <xs:enumeration value="P20" />
+          <xs:enumeration value="P21" />
+          <xs:enumeration value="P22" />
+          <xs:enumeration value="P23" />
+          <xs:enumeration value="P24" />
+          <xs:enumeration value="P25" />
+          <xs:enumeration value="P26" />
+          <xs:enumeration value="P27" />
+          <xs:enumeration value="P28" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="TEX_YarnWarpWeftType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None" />
+          <xs:enumeration value="Warp" />
+          <xs:enumeration value="Weft" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="ArrayOfTEX_AxdFNRecipeDetail" nillable="true" type="tns:ArrayOfTEX_AxdFNRecipeDetail" />
+      <xs:element name="ArrayOfTEX_AxdFNRecipeMain" nillable="true" type="tns:ArrayOfTEX_AxdFNRecipeMain" />
+      <xs:element name="ArrayOfTEX_AxdFabCombo" nillable="true" type="tns:ArrayOfTEX_AxdFabCombo" />
+      <xs:element name="ArrayOfTEX_AxdGreigeItemArrivalLine" nillable="true" type="tns:ArrayOfTEX_AxdGreigeItemArrivalLine" />
+      <xs:element name="ArrayOfTEX_AxdGreigeItemArrivalTable" nillable="true" type="tns:ArrayOfTEX_AxdGreigeItemArrivalTable" />
+      <xs:element name="ArrayOfTEX_AxdKMISConstruction" nillable="true" type="tns:ArrayOfTEX_AxdKMISConstruction" />
+      <xs:element name="ArrayOfTEX_AxdKMISDCAItemMaster" nillable="true" type="tns:ArrayOfTEX_AxdKMISDCAItemMaster" />
+      <xs:element name="ArrayOfTEX_AxdKMISDyeMethod" nillable="true" type="tns:ArrayOfTEX_AxdKMISDyeMethod" />
+      <xs:element name="ArrayOfTEX_AxdKMISFinishing" nillable="true" type="tns:ArrayOfTEX_AxdKMISFinishing" />
+      <xs:element name="ArrayOfTEX_AxdKMISYarnBasalComp" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnBasalComp" />
+      <xs:element name="ArrayOfTEX_AxdKMISYarnBasalProcess" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnBasalProcess" />
+      <xs:element name="ArrayOfTEX_AxdKMISYarnComp" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnComp" />
+      <xs:element name="ArrayOfTEX_AxdKMISYarnContent" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnContent" />
+      <xs:element name="ArrayOfTEX_AxdKMISYarnCount" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnCount" />
+      <xs:element name="ArrayOfTEX_AxdKMISYarnProcess" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnProcess" />
+      <xs:element name="ArrayOfTEX_AxdKMISYarnProduct" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnProduct" />
+      <xs:element name="ArrayOfTEX_AxdKMISYarnTypeMapping" nillable="true" type="tns:ArrayOfTEX_AxdKMISYarnTypeMapping" />
+      <xs:element name="ArrayOfTEX_AxdORABusinessUnit" nillable="true" type="tns:ArrayOfTEX_AxdORABusinessUnit" />
+      <xs:element name="ArrayOfTEX_AxdORACostCenter" nillable="true" type="tns:ArrayOfTEX_AxdORACostCenter" />
+      <xs:element name="ArrayOfTEX_AxdORADCAItemArrivalLine" nillable="true" type="tns:ArrayOfTEX_AxdORADCAItemArrivalLine" />
+      <xs:element name="ArrayOfTEX_AxdORADCAItemArrivalTable" nillable="true" type="tns:ArrayOfTEX_AxdORADCAItemArrivalTable" />
+      <xs:element name="ArrayOfTEX_AxdORAEntity" nillable="true" type="tns:ArrayOfTEX_AxdORAEntity" />
+      <xs:element name="ArrayOfTEX_AxdORAExchRate" nillable="true" type="tns:ArrayOfTEX_AxdORAExchRate" />
+      <xs:element name="ArrayOfTEX_AxdORAInterco" nillable="true" type="tns:ArrayOfTEX_AxdORAInterco" />
+      <xs:element name="ArrayOfTEX_AxdORANaturalAccount" nillable="true" type="tns:ArrayOfTEX_AxdORANaturalAccount" />
+      <xs:element name="ArrayOfTEX_AxdORASegment" nillable="true" type="tns:ArrayOfTEX_AxdORASegment" />
+      <xs:element name="ArrayOfTEX_AxdORASpareOne" nillable="true" type="tns:ArrayOfTEX_AxdORASpareOne" />
+      <xs:element name="ArrayOfTEX_AxdORASpareTwo" nillable="true" type="tns:ArrayOfTEX_AxdORASpareTwo" />
+      <xs:element name="ArrayOfTEX_AxdORASubCode" nillable="true" type="tns:ArrayOfTEX_AxdORASubCode" />
+      <xs:element name="ArrayOfTEX_AxdORASupplierSite" nillable="true" type="tns:ArrayOfTEX_AxdORASupplierSite" />
+      <xs:element name="ArrayOfTEX_AxdORASupplierTable" nillable="true" type="tns:ArrayOfTEX_AxdORASupplierTable" />
+      <xs:element name="ArrayOfTEX_AxdORATaxCode" nillable="true" type="tns:ArrayOfTEX_AxdORATaxCode" />
+      <xs:element name="ArrayOfTEX_AxdORAVendPaymentTerm" nillable="true" type="tns:ArrayOfTEX_AxdORAVendPaymentTerm" />
+      <xs:element name="ArrayOfTEX_AxdPDStdArtDetail" nillable="true" type="tns:ArrayOfTEX_AxdPDStdArtDetail" />
+      <xs:element name="ArrayOfTEX_AxdPDStdArtMain" nillable="true" type="tns:ArrayOfTEX_AxdPDStdArtMain" />
+      <xs:element name="ArrayOfTEX_AxdPDTechnicsDetail" nillable="true" type="tns:ArrayOfTEX_AxdPDTechnicsDetail" />
+      <xs:element name="ArrayOfTEX_AxdPDTechnicsMain" nillable="true" type="tns:ArrayOfTEX_AxdPDTechnicsMain" />
+      <xs:element name="ArrayOfTEX_AxdPPOItemSize" nillable="true" type="tns:ArrayOfTEX_AxdPPOItemSize" />
+      <xs:element name="ArrayOfTEX_AxdPPOXWashType" nillable="true" type="tns:ArrayOfTEX_AxdPPOXWashType" />
+      <xs:element name="ArrayOfTEX_AxdQCAvailableWidth" nillable="true" type="tns:ArrayOfTEX_AxdQCAvailableWidth" />
+      <xs:element name="ArrayOfTEX_AxdQCConstructionDetails" nillable="true" type="tns:ArrayOfTEX_AxdQCConstructionDetails" />
+      <xs:element name="ArrayOfTEX_AxdQCCustomerLibrary" nillable="true" type="tns:ArrayOfTEX_AxdQCCustomerLibrary" />
+      <xs:element name="ArrayOfTEX_AxdQCFinishDetails" nillable="true" type="tns:ArrayOfTEX_AxdQCFinishDetails" />
+      <xs:element name="ArrayOfTEX_AxdQCYarnDetails" nillable="true" type="tns:ArrayOfTEX_AxdQCYarnDetails" />
+      <xs:element name="ArrayOfTEX_AxdRTColorHeader" nillable="true" type="tns:ArrayOfTEX_AxdRTColorHeader" />
+      <xs:element name="ArrayOfTEX_AxdRTColorPrescribeHdr" nillable="true" type="tns:ArrayOfTEX_AxdRTColorPrescribeHdr" />
+      <xs:element name="ArrayOfTEX_AxdViewKPPOCombo" nillable="true" type="tns:ArrayOfTEX_AxdViewKPPOCombo" />
+      <xs:element name="ArrayOfTEX_AxdViewKPPOComboLapdip" nillable="true" type="tns:ArrayOfTEX_AxdViewKPPOComboLapdip" />
+      <xs:element name="ArrayOfTEX_AxdViewPPODT" nillable="true" type="tns:ArrayOfTEX_AxdViewPPODT" />
+      <xs:element name="ArrayOfTEX_AxdViewPPOQCConstructionDetails" nillable="true" type="tns:ArrayOfTEX_AxdViewPPOQCConstructionDetails" />
+      <xs:element name="ArrayOfTEX_AxdViewPPOQCFinishDetails" nillable="true" type="tns:ArrayOfTEX_AxdViewPPOQCFinishDetails" />
+      <xs:element name="ArrayOfTEX_AxdViewPPOQCMainInfo" nillable="true" type="tns:ArrayOfTEX_AxdViewPPOQCMainInfo" />
+      <xs:element name="ArrayOfTEX_AxdViewPPOQCYarnDetails" nillable="true" type="tns:ArrayOfTEX_AxdViewPPOQCYarnDetails" />
+      <xs:element name="ArrayOfTEX_AxdYarnArrivalLine" nillable="true" type="tns:ArrayOfTEX_AxdYarnArrivalLine" />
+      <xs:element name="ArrayOfTEX_AxdYarnArrivalTable" nillable="true" type="tns:ArrayOfTEX_AxdYarnArrivalTable" />
+      <xs:element name="ESQ_CommonWebServiceMsg" nillable="true" type="tns:ESQ_CommonWebServiceMsg" />
+      <xs:element name="TEX_AxdFNRecipeDetail" nillable="true" type="tns:TEX_AxdFNRecipeDetail" />
+      <xs:element name="TEX_AxdFNRecipeMain" nillable="true" type="tns:TEX_AxdFNRecipeMain" />
+      <xs:element name="TEX_AxdFabCombo" nillable="true" type="tns:TEX_AxdFabCombo" />
+      <xs:element name="TEX_AxdGreigeItemArrivalLine" nillable="true" type="tns:TEX_AxdGreigeItemArrivalLine" />
+      <xs:element name="TEX_AxdGreigeItemArrivalRequest" nillable="true" type="tns:TEX_AxdGreigeItemArrivalRequest" />
+      <xs:element name="TEX_AxdGreigeItemArrivalTable" nillable="true" type="tns:TEX_AxdGreigeItemArrivalTable" />
+      <xs:element name="TEX_AxdInventTable" nillable="true" type="tns:TEX_AxdInventTable" />
+      <xs:element name="TEX_AxdKMISConstruction" nillable="true" type="tns:TEX_AxdKMISConstruction" />
+      <xs:element name="TEX_AxdKMISDCAItemMaster" nillable="true" type="tns:TEX_AxdKMISDCAItemMaster" />
+      <xs:element name="TEX_AxdKMISDCAItemMasterRequest" nillable="true" type="tns:TEX_AxdKMISDCAItemMasterRequest" />
+      <xs:element name="TEX_AxdKMISDyeMethod" nillable="true" type="tns:TEX_AxdKMISDyeMethod" />
+      <xs:element name="TEX_AxdKMISFinishing" nillable="true" type="tns:TEX_AxdKMISFinishing" />
+      <xs:element name="TEX_AxdKMISRequest" nillable="true" type="tns:TEX_AxdKMISRequest" />
+      <xs:element name="TEX_AxdKMISYarnBasalComp" nillable="true" type="tns:TEX_AxdKMISYarnBasalComp" />
+      <xs:element name="TEX_AxdKMISYarnBasalProcess" nillable="true" type="tns:TEX_AxdKMISYarnBasalProcess" />
+      <xs:element name="TEX_AxdKMISYarnComp" nillable="true" type="tns:TEX_AxdKMISYarnComp" />
+      <xs:element name="TEX_AxdKMISYarnContent" nillable="true" type="tns:TEX_AxdKMISYarnContent" />
+      <xs:element name="TEX_AxdKMISYarnCount" nillable="true" type="tns:TEX_AxdKMISYarnCount" />
+      <xs:element name="TEX_AxdKMISYarnProcess" nillable="true" type="tns:TEX_AxdKMISYarnProcess" />
+      <xs:element name="TEX_AxdKMISYarnProduct" nillable="true" type="tns:TEX_AxdKMISYarnProduct" />
+      <xs:element name="TEX_AxdKMISYarnTypeMapping" nillable="true" type="tns:TEX_AxdKMISYarnTypeMapping" />
+      <xs:element name="TEX_AxdLabDipColorRequest" nillable="true" type="tns:TEX_AxdLabDipColorRequest" />
+      <xs:element name="TEX_AxdORABusinessUnit" nillable="true" type="tns:TEX_AxdORABusinessUnit" />
+      <xs:element name="TEX_AxdORACostCenter" nillable="true" type="tns:TEX_AxdORACostCenter" />
+      <xs:element name="TEX_AxdORADCAItemArrivalLine" nillable="true" type="tns:TEX_AxdORADCAItemArrivalLine" />
+      <xs:element name="TEX_AxdORADCAItemArrivalRequest" nillable="true" type="tns:TEX_AxdORADCAItemArrivalRequest" />
+      <xs:element name="TEX_AxdORADCAItemArrivalTable" nillable="true" type="tns:TEX_AxdORADCAItemArrivalTable" />
+      <xs:element name="TEX_AxdORAEntity" nillable="true" type="tns:TEX_AxdORAEntity" />
+      <xs:element name="TEX_AxdORAExchRate" nillable="true" type="tns:TEX_AxdORAExchRate" />
+      <xs:element name="TEX_AxdORAExchRateRequest" nillable="true" type="tns:TEX_AxdORAExchRateRequest" />
+      <xs:element name="TEX_AxdORAFinanceDimensionRequest" nillable="true" type="tns:TEX_AxdORAFinanceDimensionRequest" />
+      <xs:element name="TEX_AxdORAInterco" nillable="true" type="tns:TEX_AxdORAInterco" />
+      <xs:element name="TEX_AxdORANaturalAccount" nillable="true" type="tns:TEX_AxdORANaturalAccount" />
+      <xs:element name="TEX_AxdORASegment" nillable="true" type="tns:TEX_AxdORASegment" />
+      <xs:element name="TEX_AxdORASegmentRequest" nillable="true" type="tns:TEX_AxdORASegmentRequest" />
+      <xs:element name="TEX_AxdORASpareOne" nillable="true" type="tns:TEX_AxdORASpareOne" />
+      <xs:element name="TEX_AxdORASpareTwo" nillable="true" type="tns:TEX_AxdORASpareTwo" />
+      <xs:element name="TEX_AxdORASubCode" nillable="true" type="tns:TEX_AxdORASubCode" />
+      <xs:element name="TEX_AxdORASupplierRequest" nillable="true" type="tns:TEX_AxdORASupplierRequest" />
+      <xs:element name="TEX_AxdORASupplierSite" nillable="true" type="tns:TEX_AxdORASupplierSite" />
+      <xs:element name="TEX_AxdORASupplierSiteRequest" nillable="true" type="tns:TEX_AxdORASupplierSiteRequest" />
+      <xs:element name="TEX_AxdORASupplierTable" nillable="true" type="tns:TEX_AxdORASupplierTable" />
+      <xs:element name="TEX_AxdORATaxCode" nillable="true" type="tns:TEX_AxdORATaxCode" />
+      <xs:element name="TEX_AxdORATaxCodeRequest" nillable="true" type="tns:TEX_AxdORATaxCodeRequest" />
+      <xs:element name="TEX_AxdORAVendPaymentTerm" nillable="true" type="tns:TEX_AxdORAVendPaymentTerm" />
+      <xs:element name="TEX_AxdORAVendPaymentTermRequest" nillable="true" type="tns:TEX_AxdORAVendPaymentTermRequest" />
+      <xs:element name="TEX_AxdPDStdArtDetail" nillable="true" type="tns:TEX_AxdPDStdArtDetail" />
+      <xs:element name="TEX_AxdPDStdArtMain" nillable="true" type="tns:TEX_AxdPDStdArtMain" />
+      <xs:element name="TEX_AxdPDTechnicsDetail" nillable="true" type="tns:TEX_AxdPDTechnicsDetail" />
+      <xs:element name="TEX_AxdPDTechnicsMain" nillable="true" type="tns:TEX_AxdPDTechnicsMain" />
+      <xs:element name="TEX_AxdPPOHD" nillable="true" type="tns:TEX_AxdPPOHD" />
+      <xs:element name="TEX_AxdPPOItemSize" nillable="true" type="tns:TEX_AxdPPOItemSize" />
+      <xs:element name="TEX_AxdPPOXWashType" nillable="true" type="tns:TEX_AxdPPOXWashType" />
+      <xs:element name="TEX_AxdQCAvailableWidth" nillable="true" type="tns:TEX_AxdQCAvailableWidth" />
+      <xs:element name="TEX_AxdQCConstructionDetails" nillable="true" type="tns:TEX_AxdQCConstructionDetails" />
+      <xs:element name="TEX_AxdQCCustomerLibrary" nillable="true" type="tns:TEX_AxdQCCustomerLibrary" />
+      <xs:element name="TEX_AxdQCFinishDetails" nillable="true" type="tns:TEX_AxdQCFinishDetails" />
+      <xs:element name="TEX_AxdQCYarnDetails" nillable="true" type="tns:TEX_AxdQCYarnDetails" />
+      <xs:element name="TEX_AxdRTColorHeader" nillable="true" type="tns:TEX_AxdRTColorHeader" />
+      <xs:element name="TEX_AxdRTColorPrescribeHdr" nillable="true" type="tns:TEX_AxdRTColorPrescribeHdr" />
+      <xs:element name="TEX_AxdViewKPPOCombo" nillable="true" type="tns:TEX_AxdViewKPPOCombo" />
+      <xs:element name="TEX_AxdViewKPPOComboLapdip" nillable="true" type="tns:TEX_AxdViewKPPOComboLapdip" />
+      <xs:element name="TEX_AxdViewPPODT" nillable="true" type="tns:TEX_AxdViewPPODT" />
+      <xs:element name="TEX_AxdViewPPOQCConstructionDetails" nillable="true" type="tns:TEX_AxdViewPPOQCConstructionDetails" />
+      <xs:element name="TEX_AxdViewPPOQCFinishDetails" nillable="true" type="tns:TEX_AxdViewPPOQCFinishDetails" />
+      <xs:element name="TEX_AxdViewPPOQCMainInfo" nillable="true" type="tns:TEX_AxdViewPPOQCMainInfo" />
+      <xs:element name="TEX_AxdViewPPOQCYarnDetails" nillable="true" type="tns:TEX_AxdViewPPOQCYarnDetails" />
+      <xs:element name="TEX_AxdYarnArrivalLine" nillable="true" type="tns:TEX_AxdYarnArrivalLine" />
+      <xs:element name="TEX_AxdYarnArrivalRequest" nillable="true" type="tns:TEX_AxdYarnArrivalRequest" />
+      <xs:element name="TEX_AxdYarnArrivalTable" nillable="true" type="tns:TEX_AxdYarnArrivalTable" />
+      <xs:element name="TEX_DCAType" nillable="true" type="tns:TEX_DCAType" />
+      <xs:element name="TEX_InventStatus" nillable="true" type="tns:TEX_InventStatus" />
+      <xs:element name="TEX_ProdType" nillable="true" type="tns:TEX_ProdType" />
+      <xs:element name="TEX_YarnWarpWeftType" nillable="true" type="tns:TEX_YarnWarpWeftType" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="TEX_CommonInterfaceServicesPushInventTableRequest">
+    <wsdl:part name="parameters" element="ns0:TEX_CommonInterfaceServicesPushInventTableRequest" />
+  </wsdl:message>
+  <wsdl:message name="resp">
+    <wsdl:part name="parameters" element="ns1:resp" />
+  </wsdl:message>
+  <wsdl:portType name="portType">
+    <wsdl:operation name="TransQCOp">
+      <wsdl:input message="tns:TEX_CommonInterfaceServicesPushInventTableRequest" />
+      <wsdl:output message="tns:resp" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="intfwsTransQCEndpoint0Binding" type="tns:portType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TransQCOp">
+      <soap:operation soapAction="/interfaces/insertQC/intfTransQC-service.serviceagent/intfwsTransQCEndpoint0/TransQCOp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="intfTransQC-service">
+    <wsdl:port name="intfwsTransQCEndpoint0" binding="tns:intfwsTransQCEndpoint0Binding">
+      <soap:address location="http://ifs.azrllb.esquel.cloud/interfaces/insertQC/intfTransQC-service.serviceagent/intfwsTransQCEndpoint0" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

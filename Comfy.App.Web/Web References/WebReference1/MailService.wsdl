@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="IsConnected">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsConnectedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsConnectedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="From" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Format" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMail2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bcc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="From" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Format" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fc" type="tns:ArrayOfFileClass" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFileClass">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FileClass" nillable="true" type="tns:FileClass" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FileClass">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="WS_FileByte" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="WS_FileAttributes" type="tns:FileAttributes" />
+          <s:element minOccurs="1" maxOccurs="1" name="WS_CreationTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="WS_LastAccessTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="WS_LastWriteTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="WS_FullName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="FileAttributes">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="ReadOnly" />
+              <s:enumeration value="Hidden" />
+              <s:enumeration value="System" />
+              <s:enumeration value="Directory" />
+              <s:enumeration value="Archive" />
+              <s:enumeration value="Device" />
+              <s:enumeration value="Normal" />
+              <s:enumeration value="Temporary" />
+              <s:enumeration value="SparseFile" />
+              <s:enumeration value="ReparsePoint" />
+              <s:enumeration value="Compressed" />
+              <s:enumeration value="Offline" />
+              <s:enumeration value="NotContentIndexed" />
+              <s:enumeration value="Encrypted" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:element name="SendMail2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMail2Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMail3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bcc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="From" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Format" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fc" type="tns:ArrayOfFileClass" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMail3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMail3Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IsConnectedSoapIn">
+    <wsdl:part name="parameters" element="tns:IsConnected" />
+  </wsdl:message>
+  <wsdl:message name="IsConnectedSoapOut">
+    <wsdl:part name="parameters" element="tns:IsConnectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMail" />
+  </wsdl:message>
+  <wsdl:message name="SendMailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMail2SoapIn">
+    <wsdl:part name="parameters" element="tns:SendMail2" />
+  </wsdl:message>
+  <wsdl:message name="SendMail2SoapOut">
+    <wsdl:part name="parameters" element="tns:SendMail2Response" />
+  </wsdl:message>
+  <wsdl:message name="SendMail3SoapIn">
+    <wsdl:part name="parameters" element="tns:SendMail3" />
+  </wsdl:message>
+  <wsdl:message name="SendMail3SoapOut">
+    <wsdl:part name="parameters" element="tns:SendMail3Response" />
+  </wsdl:message>
+  <wsdl:portType name="MailServiceSoap">
+    <wsdl:operation name="IsConnected">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">判斷是否連接成功</documentation>
+      <wsdl:input message="tns:IsConnectedSoapIn" />
+      <wsdl:output message="tns:IsConnectedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">原來的方法</documentation>
+      <wsdl:input message="tns:SendMailSoapIn" />
+      <wsdl:output message="tns:SendMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail2">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">使用工卡號，自動轉化為個人信息中心上的Mail地址,並且可帶附件</documentation>
+      <wsdl:input message="tns:SendMail2SoapIn" />
+      <wsdl:output message="tns:SendMail2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail3">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">附件方法，亦可作一般郵件使用。參數FileClass為文件類集合。</documentation>
+      <wsdl:input message="tns:SendMail3SoapIn" />
+      <wsdl:output message="tns:SendMail3SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MailServiceSoap" type="tns:MailServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsConnected">
+      <soap:operation soapAction="http://tempuri.org/IsConnected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap:operation soapAction="http://tempuri.org/SendMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail2">
+      <soap:operation soapAction="http://tempuri.org/SendMail2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail3">
+      <soap:operation soapAction="http://tempuri.org/SendMail3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MailService">
+    <wsdl:port name="MailServiceSoap" binding="tns:MailServiceSoap">
+      <soap:address location="http://10.184.101.8/mailservice/MailService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,202 @@
+﻿
+
+
+
+.from
+{
+	overflow:hidden;
+}
+.Features b { display: block; margin-top: 6px; margin-bottom: 5px; font-weight: normal; color: #00669B; font-size: 16px; font-family: Tahoma; }
+.mainTable{ border: solid 3px #4B78CA; border-top-width:0px;}
+#topTable
+{
+	height: 18px;
+	background-color: #3B619C;/*#4B78CA;*/
+	font: bold #CFE3FB;
+	font-size: 8pt;
+	font-weight: bold;
+	font-family: Arial;
+}
+#header
+{
+/*	background-color: #CFE3FB;*/
+}
+#headerTable
+{
+	/*background-image: url('../App/Top_bg.gif');*/
+	background-color:#EFA200;
+	background-repeat: repeat-x;
+}
+#bottomTable
+{
+	width: 100%; height: 25px; color: #3B619C;
+}
+.gridViewHeader
+{
+	background-image:url('../../GridView/gvHeaderBackground.gif');
+	background-repeat:repeat-x;
+	height:16px;
+}
+.labelCell
+{
+	white-space:nowrap;
+	padding: 2px 0 2px 10px;
+}
+.controlCell
+{
+	white-space:nowrap;
+	padding-left:3px;
+}
+div.Spacer {
+    overflow: hidden;
+    width: 1px;
+    height: 1px;    
+}
+/*div{scrollbar-base-color : #CFE3FB;scrollbar-shadow-color :#A3C0E8;scrollbar-darkshadow-color:#4B78CB}*/
+/*Login*/
+.table_login{width: 503px; height: 296px;}
+.top_login{height: 28px; background-image: url('../App/Login_01.gif')
+}
+.left_login{width: 44px; height: 240px; background-image: url('../App/Login_02.gif')
+}
+.right_login{width: 44px; background-image: url('../App/Login_04.gif')
+}
+.bottom_login{height: 28px; background-image: url('../App/Login_05.gif')
+}
+.table_inner_login{width: 100%; height: 220px; border: solid 1px #A3C0E8; background-color: #E7EFFA}
+.header_login{height: 60px; background-image: url('../App/Top_bg.gif'); 
+background-repeat:repeat-x;
+}
+.space_login{padding: 2px 6px 2px 6px; background-color: White}
+.table_input_login{width: 100%; color: #4B78CA;}
+.copyright_login{color: #3B619C;height: 20px; padding-right: 10px}
+.caption_login{white-space: nowrap; text-align:right}
+/*NavTree*/
+.hiddenDiv
+{
+	height: 1px; width: 1px; overflow: hidden;
+}
+.NavClientTree 
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, "宋体", sans-serif;
+	font-size: 12px;
+	color: #666;
+	white-space: nowrap; 
+	padding:1px;
+	line-height:1.2em;
+    text-align :left;
+}
+.NavClientTree img {border: 0px;vertical-align:middle;}
+.NavClientTree a {color: #333; vertical-align :bottom; text-decoration:none; }
+.NavClientTree .node, .NavClientTree .nodeSel, .NavClientTree .node_hover
+{
+	vertical-align:bottom;
+	height:25px;
+	white-space: nowrap;	
+	text-decoration:none; 
+	border: Solid 1px #F2F8FF;
+}
+.NavClientTree .node:hover, .NavClientTree .nodeSel:hover, .NavClientTree .node_hover
+{
+	background-color: #FFE7A2;
+	/*text-decoration:underline;*/
+	border: solid 1px #FFBD69;
+}
+.NavClientTree .nodeSel {background-color: #FFBD69;text-decoration:none;border: solid 1px #FFBD69;}
+.NavClientTree .clip {overflow: hidden;}
+/*Pager*/
+.PagerPanel
+{
+    padding:0;
+	border-top: solid 1px #AECAF0;
+    background-image: url('../App/gvPagerBottomPanelBackground.gif');
+    background-repeat: repeat-x;
+    background-color: #ffffff;
+}
+.UserControlPanel
+{
+	border: solid 1px #A3C0E8;
+	padding:10px;
+	background-color: #CFE3FB;
+}
+
+
+.staticMenuItemStyle {
+text-align:center;
+display:block;
+padding-left:2px;
+padding-right:2px;
+margin-left:0;
+}
+
+.staticMenuItemSelectedStyle {
+border:solid 1px #000;
+}
+
+.staticHoverStyle {
+background-image:url(../Images/bg-black.gif);
+}
+
+.menuItem {
+display:block;
+}
+
+.dynamicMenuItemStyle {
+display:block;
+border:solid 1px #AECAF0;
+background-color:#90B5CF;
+color:Black;
+z-index:200;
+width:60px;
+position:relative;
+}
+
+.background {
+border:solid 1px #000;
+}
+
+.NavigationMenu {
+font-family:Verdana;
+font-size:10pt;
+color:#000;
+z-index:101;
+}
+
+#h {
+background:#CCCFFF;
+padding:5px 0 6px 10px;
+}
+
+#e {
+border:solid 1px #919191;
+background-image:url(../Images/sub.gif);
+padding:0 0 1px;
+}
+
+.menuItemMouseOver,.menuItemSelected {
+border:solid 1px red;
+background-image:url(../Images/bg-black.gif);
+}
+
+.NavigationMenu A:link,.NavigationMenu A:visited,.NavigationMenu A:active {
+color:#000;
+}
+
+.currentNodeStyle,.nodeStyle,.rootNodeStyle,a.siteMapPath {
+text-decoration:none;
+font-family:Verdana;
+font-size:10pt;
+}
+
+
+/*滚动条样式*/
+/*html{
+	scrollbar-face-color: #DDEEFF; 
+	scrollbar-highlight-color: #FFFFFF; 
+	scrollbar-shadow-color: #99BBCC; 
+	scrollbar-3dlight-color: #AACCDD; 
+	scrollbar-arrow-color: #6688AA;
+	scrollbar-track-color: #EEEEEE; 
+	scrollbar-darkshadow-color: #DDEEFF; 
+}*/
+/*滚动条样式*/

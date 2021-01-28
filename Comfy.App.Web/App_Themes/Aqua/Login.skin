@@ -1,0 +1,7 @@
+﻿<asp:Image SkinID="imgLogo" runat="server" ImageUrl="~/App_Themes/Aqua/Main/App/Logo.gif"></asp:Image> 
+<asp:Image SkinID="imgLt" runat="server" ImageUrl="~/App_Themes/Aqua/Main/App/LeftTriangle.gif"></asp:Image>
+<asp:Image SkinID="imgRt" runat="server" ImageUrl="~/App_Themes/Aqua/Main/App/RightTriangle.gif"></asp:Image>
+<asp:Label SkinID="lblAppName" runat="server" Font-Names="楷体,標楷體,Tahoma,黑体,Tahoma"  Font-Bold="True" Font-Size="20px" ForeColor="#4B78CA"></asp:Label>
+<asp:Label SkinID="lblAppNameEn" runat="server" Font-Names="Times New Roman,Tahoma" Font-Size="11px" ForeColor="#4B78CA"></asp:Label>
+<asp:Image SkinID="imgComputer" runat="server" ImageUrl="~/App_Themes/Aqua/Main/App/Computer.png" Width="137px"></asp:Image>
+<asp:HyperLink runat="server" Text="" SkinID="hlLogo" ImageUrl="~/App_Themes/Aqua/Main/App/Logo2.gif"  ></asp:HyperLink>

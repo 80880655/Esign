@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB199AAB-C461-4CA2-B1CD-6F88AAB1B8F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Comfy.UI.WebControls</RootNamespace>
+    <AssemblyName>Comfy.UI.WebControls</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Nonshipping>true</Nonshipping>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebButton\WebButtonEdit\ButtonEditJs.cs" />
+    <Compile Include="WebButton\WebButtonEdit\WebButtonEdit.cs" />
+    <Compile Include="WebButton\FaceStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebButton\SearchControl.cs" />
+    <Compile Include="WebButton\ViewStateControl.cs" />
+    <Compile Include="WebButton\WebButton.cs" />
+    <Compile Include="WebCalendar\WebCalendar.cs" />
+    <Compile Include="WebCheckBox\WebCheckBox.cs" />
+    <Compile Include="WebDropDownCheckBoxList\WebDropDownCheckBoxList.cs" />
+    <Compile Include="WebGridView\AbsControl.cs" />
+    <Compile Include="WebGridView\Field.cs" />
+    <Compile Include="WebGridView\Fields.cs" />
+    <Compile Include="WebGridView\GridButtonEdit.cs" />
+    <Compile Include="WebGridView\GridCheckBox.cs" />
+    <Compile Include="WebGridView\GridCheckBoxList.cs" />
+    <Compile Include="WebGridView\GridComboBox.cs" />
+    <Compile Include="WebGridView\GridControlCreator.cs" />
+    <Compile Include="WebGridView\GridDate.cs" />
+    <Compile Include="WebGridView\GridDefaultControl.cs" />
+    <Compile Include="WebGridView\GridJs.cs" />
+    <Compile Include="WebGridView\GridTextArea.cs" />
+    <Compile Include="WebGridView\Item.cs" />
+    <Compile Include="WebGridView\Items.cs" />
+    <Compile Include="WebGridView\TextJs.cs" />
+    <Compile Include="WebGridView\Transformation\ExportBase.cs" />
+    <Compile Include="WebGridView\Transformation\ExportHtmlXmlTxt.cs" />
+    <Compile Include="WebGridView\Transformation\ExportXls.cs" />
+    <Compile Include="WebGridView\Transformation\FormatStringConverter.cs" />
+    <Compile Include="WebGridView\Transformation\ImportXls.cs" />
+    <Compile Include="WebGridView\Transformation\XlsPictures.cs" />
+    <Compile Include="WebGridView\WebGridExporter.cs" />
+    <Compile Include="WebGridView\WebGridView.cs" />
+    <Compile Include="WebHyperLink\WebHyperLink.cs" />
+    <Compile Include="WebLabel\WebLabel.cs" />
+    <Compile Include="WebPopupControl\ContentItem.cs" />
+    <Compile Include="WebPopupControl\PopupControl.cs" />
+    <Compile Include="WebTextBox\WebTextBox.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WebCalendar\images\CalendarBox.ico" />
+    <EmbeddedResource Include="WebCalendar\images\date.gif" />
+    <EmbeddedResource Include="WebCalendar\js\calendar1.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WebCalendar\css\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WebDropDownCheckBoxList\Comfy.UI.WebControls.WebDropDownCheckBoxList.WebDropDownCheckBoxList.bmp" />
+    <Content Include="WebDropDownCheckBoxList\Resources\cmb_down.jpg" />
+    <Content Include="WebDropDownCheckBoxList\Resources\cmb_up.jpg" />
+    <Content Include="WebDropDownCheckBoxList\Resources\DropDownCheckBoxList.js" />
+    <EmbeddedResource Include="WebGridView\Css\css.css" />
+    <EmbeddedResource Include="WebGridView\Css\flexigrid.css" />
+    <EmbeddedResource Include="WebGridView\Images\._fhbg.gif" />
+    <EmbeddedResource Include="WebGridView\Images\._wbg.gif" />
+    <EmbeddedResource Include="WebGridView\Images\bg.gif" />
+    <EmbeddedResource Include="WebGridView\Images\btn-sprite.gif" />
+    <EmbeddedResource Include="WebGridView\Images\ddn.png" />
+    <EmbeddedResource Include="WebGridView\Images\dialog_ct.png" />
+    <EmbeddedResource Include="WebGridView\Images\DivHeadBG.gif" />
+    <EmbeddedResource Include="WebGridView\Images\dn.png" />
+    <EmbeddedResource Include="WebGridView\Images\fhbg.gif" />
+    <EmbeddedResource Include="WebGridView\Images\first.gif" />
+    <EmbeddedResource Include="WebGridView\Images\footerbg.gif" />
+    <EmbeddedResource Include="WebGridView\Images\formHead.gif" />
+    <EmbeddedResource Include="WebGridView\Images\gvheaderbg.gif" />
+    <EmbeddedResource Include="WebGridView\Images\hl.png" />
+    <EmbeddedResource Include="WebGridView\Images\last.gif" />
+    <EmbeddedResource Include="WebGridView\Images\line.gif" />
+    <EmbeddedResource Include="WebGridView\Images\load.gif" />
+    <EmbeddedResource Include="WebGridView\Images\load.png" />
+    <EmbeddedResource Include="WebGridView\Images\Loading.gif" />
+    <EmbeddedResource Include="WebGridView\Images\magnifier.png" />
+    <EmbeddedResource Include="WebGridView\Images\next.gif" />
+    <EmbeddedResource Include="WebGridView\Images\pcCloseButton.png" />
+    <EmbeddedResource Include="WebGridView\Images\pNext.png" />
+    <EmbeddedResource Include="WebGridView\Images\pNextDisabled.gif" />
+    <EmbeddedResource Include="WebGridView\Images\pPreDisabled.gif" />
+    <EmbeddedResource Include="WebGridView\Images\pPrev.png" />
+    <EmbeddedResource Include="WebGridView\Images\prev.gif" />
+    <EmbeddedResource Include="WebGridView\Images\up.png" />
+    <EmbeddedResource Include="WebGridView\Images\uup.png" />
+    <EmbeddedResource Include="WebGridView\Images\WaitLoad.gif" />
+    <EmbeddedResource Include="WebGridView\Images\wbg.gif" />
+    <EmbeddedResource Include="WebGridView\Js\form.checker.js" />
+    <EmbeddedResource Include="WebGridView\Js\grid.js" />
+    <EmbeddedResource Include="WebGridView\Js\jquery.move.js" />
+    <EmbeddedResource Include="WebGridView\Js\jquery1.4.js" />
+    <EmbeddedResource Include="WebGridView\Js\movetab.js" />
+    <EmbeddedResource Include="WebGridView\Js\WebGrid.js" />
+    <EmbeddedResource Include="WebButton\WebButtonEdit\Image\editBg.png" />
+    <EmbeddedResource Include="WebButton\WebButtonEdit\Image\edtEllipsis.png" />
+    <EmbeddedResource Include="WebButton\WebButtonEdit\Js\ButtonEdit.js" />
+    <EmbeddedResource Include="WebPopupControl\Css\PopupControl.css" />
+    <EmbeddedResource Include="WebPopupControl\Images\formHead.gif" />
+    <EmbeddedResource Include="WebPopupControl\Images\pcCloseButton.png" />
+    <EmbeddedResource Include="WebPopupControl\Js\PopupControl.js" />
+    <EmbeddedResource Include="WebCalendar\js\calendar.js" />
+    <Content Include="WebCalendar\js\DateFormat.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WebGridView\Images\Thumbs.db" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Features>
+  <Item Title="制造执行系统" Url=""
+        Text="制造执行系统 (manufacturing execution system， 简称MES）是美国AMR公司(Advanced Manufacturing Research，Inc．)在90年代初提出的，旨在加强MRP计划的执行功能，把MRP计划同车间作业现场控制，通过执行系统联系起来。这里的现场控制包括PLC程控器、数据采集器、条形码、各种计量及检测仪器、机械手等。MES系统设置了必要的接口，与提供生产现场控制设施的厂商建立合作关系。
+
+    
+        制造执行系统协会(Manufacturing Execution System Association，MESA)对MES所下的定义：“MES能通过信息传递对从订单下达到产品完成的整个生产过程进行优化管理。当工厂发生实时事件时，MES能对此及时做出反应、报告，并用当前的准确数据对它们进行指导和处理。这种对状态变化的迅速响应使MES能够减少企业内部没有附加值的活动，有效地指导工厂的生产运作过程，从而使其既能提高工厂及时交货能力，改善物料的流通性能，又能提高生产回报率。MES还通过双向的直接通讯在企业内部和整个产品供应链中提供有关产品行为的关键任务信息。” 
+　　MESA在MES定义中强调了以下三点： 
+　　1）MES是对整个车间制造过程的优化，而不是单一的解决某个生产瓶颈； 
+　　2）MES必须提供实时收集生产过程中数据的功能，并作出相应的分析和处理。 
+　　3）MES需要与计划层和控制层进行信息交互，通过企业的连续信息流来实现企业信息全集成。" 
+        ImageUrl="~/Images/Icon/Main.png"
+        Visible="True" />
+</Features>

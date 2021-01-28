@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF09D4EE-2134-4291-816D-B6C6339BC47E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Comfy.Data</RootNamespace>
+    <AssemblyName>Comfy.Data</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Comfy.Data.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/Comfy.Data/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Comfy.Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Comfy.Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BindableObject.cs" />
+    <Compile Include="Core\BatchCommander.cs" />
+    <Compile Include="Core\ColumnFormatter.cs" />
+    <Compile Include="Core\CommonUtils.cs" />
+    <Compile Include="Core\CustomQueryTable.cs" />
+    <Compile Include="Core\DataUtils.cs" />
+    <Compile Include="Core\ExpressionClip.cs" />
+    <Compile Include="Core\FromClip.cs" />
+    <Compile Include="Core\IExpression.cs" />
+    <Compile Include="Core\ISqlQueryFactory.cs" />
+    <Compile Include="Core\ISqlSection.cs" />
+    <Compile Include="Core\JoinType.cs" />
+    <Compile Include="Core\NameDuplicatedException.cs" />
+    <Compile Include="Core\OrderByClip.cs" />
+    <Compile Include="Core\QueryOperator.cs" />
+    <Compile Include="Core\SerializationManager.cs" />
+    <Compile Include="Core\SqlQueryFactory.cs" />
+    <Compile Include="Core\SqlQueryUtils.cs" />
+    <Compile Include="Core\SubQuery.cs" />
+    <Compile Include="Core\WhereClip.cs" />
+    <Compile Include="CSVHelper.cs" />
+    <Compile Include="CustomSqlSection.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="DatabaseType.cs" />
+    <Compile Include="DbProviders\DbProvider.cs" />
+    <Compile Include="DbProviders\DbProviderFactory.cs" />
+    <Compile Include="DbProviders\DbProviderOptions.cs" />
+    <Compile Include="DbProviders\MsAccess\AccessDbProvider.cs" />
+    <Compile Include="DbProviders\MsAccess\MsAccessDbProviderOptions.cs" />
+    <Compile Include="DbProviders\MsAccess\MsAccessQueryFactory.cs" />
+    <Compile Include="DbProviders\Oracle\OracleDbProvider.cs" />
+    <Compile Include="DbProviders\Oracle\OracleDbProviderOptions.cs" />
+    <Compile Include="DbProviders\Oracle\OracleQueryFactory.cs" />
+    <Compile Include="DbProviders\SqlServer\SqlDbProvider.cs" />
+    <Compile Include="DbProviders\SqlServer\SqlDbProvider9.cs" />
+    <Compile Include="DbProviders\SqlServer\SqlServer9QueryFactory.cs" />
+    <Compile Include="DbProviders\SqlServer\SqlServerDbProviderOptions.cs" />
+    <Compile Include="DbProviders\SqlServer\SqlServerQueryFactory.cs" />
+    <Compile Include="DeleteSqlSection.cs" />
+    <Compile Include="DataObject.cs" />
+    <Compile Include="DataObjectList.cs" />
+    <Compile Include="DataState.cs" />
+    <Compile Include="EditedObject.cs" />
+    <Compile Include="ErrorInfo.cs" />
+    <Compile Include="ErrorText.cs" />
+    <Compile Include="InsertSqlSection.cs" />
+    <Compile Include="ISavable.cs" />
+    <Compile Include="KeyTextList.cs" />
+    <Compile Include="KeyValueList.cs">
+    </Compile>
+    <Compile Include="ListChangedEventArgs.cs" />
+    <Compile Include="ListChangedType.cs" />
+    <Compile Include="ObjectCloner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryColumn.cs" />
+    <Compile Include="QueryTable.cs" />
+    <Compile Include="RefObjectCreator.cs" />
+    <Compile Include="SafeDataReader.cs" />
+    <Compile Include="SelectSqlSection.cs" />
+    <Compile Include="SqlException.cs" />
+    <Compile Include="StoredProcedureSection.cs" />
+    <Compile Include="UpdateSqlSection.cs" />
+    <Compile Include="ValidationException.cs" />
+    <Compile Include="Validator.cs" />
+    <Compile Include="ValueChangedEventArgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Comfy.Data.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
