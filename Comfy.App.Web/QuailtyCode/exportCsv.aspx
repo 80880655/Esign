@@ -12,13 +12,11 @@
              //alert("/DownLoadFile.aspx?realName=" + realName + "&outName=" + outName + ((type != undefined && type.length > 0) ? "&type=" + type : ""), "");
 
              // PRD
-             //window.open("/QuailtyCode/DownLoadFile.aspx?realName=" + realName + "&outName=" + outName + ((type != undefined && type.length > 0) ? "&type=" + type : ""), "");
-
-             //window.open("/QuailtyCode/DownLoadFile.aspx?realName=" + realName + "&outName=" + outName + ((type != undefined && type.length > 0) ? "&type=" + type : ""), "");
+             window.open("/QuailtyCode/DownLoadFile.aspx?realName=" + realName + "&outName=" + outName + ((type != undefined && type.length > 0) ? "&type=" + type : ""), "");
 
 
              // UAT
-             window.open("/QuailtyCodeUAT/DownLoadFile.aspx?realName=" + realName + "&outName=" + outName + ((type != undefined && type.length > 0) ? "&type=" + type : ""), "");
+             //window.open("/QuailtyCode/DownLoadFile.aspx?realName=" + realName + "&outName=" + outName + ((type != undefined && type.length > 0) ? "&type=" + type : ""), "");
              
          }
     </script>
@@ -33,7 +31,7 @@
             <tr>
                 <td>
                  
-                        <legend>点击导出数据，格式为CSV</legend>
+                        <legend>点击导出数据，格式为CSV2 </legend>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" Text="ExportCSV"
                             onmouseover="this.style.backgroundPosition='left -42px'" onmouseout="this.style.backgroundPosition='left top'"
                             Class="btn btn-danger" OnClick="BtnExport_Click1" />

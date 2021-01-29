@@ -545,10 +545,10 @@
             if (context.getcondition != "") {
 
                 // PRD
-                //window.open('/QuailtyCode/QuailtyCode/exportCsv.aspx?' + context.getcondition);
+                window.open('/QuailtyCode/QuailtyCode/exportCsv.aspx?' + context.getcondition);
 
                 // UAT
-                window.open('/QuailtyCodeUAT/QuailtyCode/exportCsv.aspx?' + context.getcondition);
+                //window.open('/QuailtyCode/exportCsv.aspx?' + context.getcondition);
 
   
             }

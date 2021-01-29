@@ -307,9 +307,10 @@
     <None Include="Images\eWorks.ppt" />
     <Content Include="Product.config" />
     <None Include="Properties\PublishProfiles\123.pubxml" />
+    <None Include="Properties\PublishProfiles\27.80 PRD-待发布.pubxml" />
     <None Include="Properties\PublishProfiles\EscmQuailtyCodeUAT.pubxml" />
-    <None Include="Properties\PublishProfiles\IIS UAT-gettestnt27.pubxml" />
     <None Include="Properties\PublishProfiles\LocalHostIIS.pubxml" />
+    <None Include="Properties\PublishProfiles\UAT 192.168.27.80-QualityCode.pubxml" />
     <None Include="Service References\WebReference3\Untitled.wsdl" />
     <None Include="Web References\WebReference1\MailService.wsdl" />
     <None Include="Web References\WebReference1\Reference.map">

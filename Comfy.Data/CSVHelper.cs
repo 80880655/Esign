@@ -51,6 +51,10 @@ namespace Comfy.Data
                 for (int j = 0; j < dt.Columns.Count; j++)
                 {
                     data += dt.Rows[i][j].ToString();
+
+                    // 去掉回车和换行符
+                    data = HandleWrap(data);
+
                     if (j < dt.Columns.Count - 1)
                     {
                         data += ",";//中间用，隔开
@@ -60,6 +64,22 @@ namespace Comfy.Data
             }
             sw.Close();
             fs.Close();
+        }
+
+
+
+        public static string HandleWrap(string content)
+        {
+            if (content.Contains(Environment.NewLine))
+            {
+                var list = content.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                content = string.Join(" ", list);
+            }
+
+            content = content.Replace(@"\n", "").Replace(@"\r\n", "").Replace((char)13, ' ').Replace((char)10, ' ');
+
+            return content;
+
         }
 
 

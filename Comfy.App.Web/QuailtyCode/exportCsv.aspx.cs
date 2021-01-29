@@ -15,6 +15,7 @@ using System.Data.Common;
 using Comfy.App.Core.QualityCode;
 using Comfy.Data;
 using Comfy.App.Core;
+using System.Text.RegularExpressions;
 
 namespace Comfy.App.Web
 {
@@ -769,6 +770,7 @@ AND pic.fab_combo_id=fc.fab_combo_id and qc.ppo_qc_id=qcc.ppo_qc_id and ph.custo
                     dtt.Columns.Add("Fabric Width Remark", typeof(string));
 
                     dtt.Columns.Add("Yarn Info", typeof(string));
+
                     //dtt.Columns.Add("MillComments", typeof(string));
                     dtt.Columns.Add("Quality Code Comment", typeof(string));
 
@@ -977,8 +979,16 @@ AND pic.fab_combo_id=fc.fab_combo_id and qc.ppo_qc_id=qcc.ppo_qc_id and ph.custo
                             m.CustomerComment = GetCustomerComment(m.QualityCode);
 
 
+                            //modify:gaofeng 2021 / 01 / 18 < 2021 - 0001 QC System Enhancement from sales > --begin
+
+                            if (m.MillComments.Length > 0) {
+                                m.MillComments = Regex.Replace(m.MillComments, @"[/n/r]", "");
+                            };
+
+                            
+
                             dtt.Rows.Add(
-                                //modify:gaofeng 2021 / 01 / 18 < 2021 - 0001 QC System Enhancement from sales > --begin
+                                
                                 m.QC_Key,
                                 m.QualityCode, 
                                 m.Status,         
@@ -1001,8 +1011,15 @@ AND pic.fab_combo_id=fc.fab_combo_id and qc.ppo_qc_id=qcc.ppo_qc_id and ph.custo
                                 m.YarnInfo, 
                                 //m.Layout, m.YarnLength,
                                 //m.SpecialType, 
-                                m.MillComments, 
-                                m.Measurement,
+
+
+                                //m.MillComments,
+
+                                m.MillComments,
+
+
+
+                            m.Measurement,
                                 m.TappingType,
                                 m.CustomerQualityId
 
