@@ -544,23 +544,39 @@ namespace Comfy.App.Web
                 {
                     string cmds = @"
                        select  
+
                         distinct 
-                        A.quality_code,A.status, A.replace_by, A.repeat, 
 
-                        L.ApprovedFromSPPO,
-                        L.ApprovedFromSPPO_Usage,
+                            (A.quality_code ||'-'|| A.status)as QC_Key,
+                            A.quality_code,
+                            A.status, 
+                            L.ApprovedFromSPPO,
+                            L.ApprovedFromSPPO_Usage,
+                            to_char(S.descriptions) as construction ,
+                            to_char(K.finishing_name) as Finishing,
+                            A.pattern,
+                            (N.DESCRIPTION) as DYE_METHOD ,
+                            A.bf_gmmm,
+                            A.af_gmmm,
+                            A.shrinkage,
+                            A.shrinkage_testing_method,
+                            A.gmt_washing,
+                            to_char(H.AvailableWidth) as AvailableWidth,
+                            A.remark,
+                            to_char(I.YarnInfo) as YarnInfo,
+                            to_char(J.mill_comments) as mill_comments,
+                            A.measurement,
+                            A.tapping_type ,
+                            to_char(J.customer_quality_id) as customer_quality_id
 
+                            -- A.replace_by, 
+                            -- A.repeat, 
+                            -- A.layout, A.yarn_length, (A.special_type ) as Heavy_Flat_Knit,
+                            --  A.sourcing, A.create_date, A.material_group,
+                            -- A.analysis_no, A.ref_quality_code, A.creator, A.approve_date, A.approver, 
+                            -- to_char(J.buyer_id) as buyer_id, to_char(J.brand) as Branks,
+                            -- A.gk_no, A.qc_ref_ppo, A.qc_ref_gp, A.hf_ref_ppo, A.hf_ref_gp,M.customercomment
 
-                        to_char(S.descriptions) as construction ,
-                        to_char(K.finishing_name) as Finishing,A.pattern, (N.DESCRIPTION) as DYE_METHOD , A.bf_gmmm,
-                        A.af_gmmm, A.shrinkage, A.shrinkage_testing_method, 
-                        A.gmt_washing,to_char(J.customer_quality_id) as customer_quality_id,
-                        to_char(H.AvailableWidth) as AvailableWidth,
-                        A.remark,to_char(I.YarnInfo) as YarnInfo,A.layout, A.yarn_length, A.tapping_type ,(A.special_type ) as Heavy_Flat_Knit,
-                        to_char(J.mill_comments) as mill_comments,A.measurement, A.sourcing, A.create_date, A.material_group,
-                        A.analysis_no, A.ref_quality_code, A.creator, A.approve_date, A.approver, 
-                        to_char(J.buyer_id) as buyer_id, to_char(J.brand) as Branks,
-                        A.gk_no, A.qc_ref_ppo, A.qc_ref_gp, A.hf_ref_ppo, A.hf_ref_gp,M.customercomment
                         from QCMainInfo  A 
                         left join QCConstructionDtl B on A.Quality_Code = B.Quality_Code  
                         left join QCFinishDtl C on  A.Quality_COde = C.Quality_Code
@@ -657,49 +673,46 @@ AND pic.fab_combo_id=fc.fab_combo_id and qc.ppo_qc_id=qcc.ppo_qc_id and ph.custo
                         DataTable results = new DataTable("table");
                         oleAdpers.Fill(results);
 
+                        // gaofeng 2021年2月3日16:59:15 总共21个字段
                         results.Columns["QC_Key"].ColumnName = "QC_Key";
-
-                        results.Columns["QUALITY_CODE"].ColumnName = "QualityCode";
+                        results.Columns["QUALITY_CODE"].ColumnName = "Quality Code";
                         results.Columns["STATUS"].ColumnName = "Status";
-                        results.Columns["REPLACE_BY"].ColumnName = "ReplaceBy";
-                        results.Columns["REPEAT"].ColumnName = "Repeat";
-                        results.Columns["APPROVEDFROMSPPO"].ColumnName = "ApprovedFromSPPO";
-
-
+                        //results.Columns["APPROVEDFROMSPPO"].ColumnName = "ApprovedFromSPPO";
+                        results.Columns["APPROVEDFROMSPPO"].ColumnName = "Related To SPPO";
                         //modify:gaofeng 2021 / 01 / 18 < 2021 - 0001 QC System Enhancement from sales > --begin
-                        results.Columns["APPROVEDFROMSPPO_USAGE"].ColumnName = "ApprovedFromSPPO_Usage";
-
+                        //results.Columns["APPROVEDFROMSPPO_USAGE"].ColumnName = "ApprovedFromSPPO_Usage";
+                        results.Columns["APPROVEDFROMSPPO_USAGE"].ColumnName = "Related To SPPO Usage";
                         //modify:gaofeng 2021 / 01 / 18 < 2021 - 0001 QC System Enhancement from sales > --end
-
-
                         results.Columns["CONSTRUCTION"].ColumnName = "Construction";
-                        results.Columns["FINISHING"].ColumnName = "Finishing";
+                        results.Columns["FINISHING"].ColumnName = "Fabric Finishing";
                         results.Columns["PATTERN"].ColumnName = "Pattern";
-                        results.Columns["DYE_METHOD"].ColumnName = "DyeMethod";
-                        results.Columns["BF_GMMM"].ColumnName = "BfGmmm";
+                        results.Columns["DYE_METHOD"].ColumnName = "Dye Method";
 
+                        results.Columns["BF_GMMM"].ColumnName = "Weight(B/W)";
+                        results.Columns["AF_GMMM"].ColumnName = "Weight(A/W)";
 
-                        results.Columns["AF_GMMM"].ColumnName = "AfGmmm";
                         results.Columns["SHRINKAGE"].ColumnName = "Shrinkage";
-                        results.Columns["SHRINKAGE_TESTING_METHOD"].ColumnName = "ShrinkageTestingMethod";
-                        results.Columns["GMT_WASHING"].ColumnName = "GmtWashing";
-                        results.Columns["CUSTOMER_QUALITY_ID"].ColumnName = "CustomerQualityId";
+                        results.Columns["SHRINKAGE_TESTING_METHOD"].ColumnName = "Shrinkage Test Method";
+                        results.Columns["GMT_WASHING"].ColumnName = "GMT Washing (Y or N)";
+
+                        results.Columns["AVAILABLEWIDTH"].ColumnName = "Fabric Width";
+                        results.Columns["REMARK"].ColumnName = "Fabric Width Remark";
+
+                        results.Columns["YARNINFO"].ColumnName = "Yarn Info";
+                        results.Columns["MILL_COMMENTS"].ColumnName = "Quality Code Comment";
+
+                        results.Columns["MEASUREMENT"].ColumnName = "Size";
+                        results.Columns["TAPPING_TYPE"].ColumnName = "Tapping Type";
+                        results.Columns["CUSTOMER_QUALITY_ID"].ColumnName = "Customer Quality ID";
 
 
-                        results.Columns["AVAILABLEWIDTH"].ColumnName = "Available Width";
-                        results.Columns["REMARK"].ColumnName = "Available Width Remark";
-                        results.Columns["YARNINFO"].ColumnName = "YarnInfo";
+                        //results.Columns["REPLACE_BY"].ColumnName = "ReplaceBy";
+                        //results.Columns["REPEAT"].ColumnName = "Repeat";
 
                         //results.Columns["LAYOUT"].ColumnName = "Layout";
                         //results.Columns["YARN_LENGTH"].ColumnName = "YarnLength";
-
-
-                        results.Columns["TAPPING_TYPE"].ColumnName = "TappingType";
-
                         //results.Columns["HEAVY_FLAT_KNIT"].ColumnName = "Heavy_Flat_Knit";
-
-                        results.Columns["MILL_COMMENTS"].ColumnName = "MillComments";
-                        results.Columns["MEASUREMENT"].ColumnName = "Measurement";
+  
                         return results;
                     }
                 }

@@ -31,7 +31,7 @@
             <tr>
                 <td>
                  
-                        <legend>点击导出数据，格式为CSV2 </legend>
+                        <legend>点击导出数据，格式为CSV </legend>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" Text="ExportCSV"
                             onmouseover="this.style.backgroundPosition='left -42px'" onmouseout="this.style.backgroundPosition='left top'"
                             Class="btn btn-danger" OnClick="BtnExport_Click1" />
