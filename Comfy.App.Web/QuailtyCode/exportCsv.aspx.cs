@@ -700,34 +700,6 @@ AND pic.fab_combo_id=fc.fab_combo_id and qc.ppo_qc_id=qcc.ppo_qc_id and ph.custo
 
                         results.Columns["MILL_COMMENTS"].ColumnName = "MillComments";
                         results.Columns["MEASUREMENT"].ColumnName = "Measurement";
-
-                        //results.Columns["SOURCING"].ColumnName = "Sourcing";
-
-
-                        //results.Columns["CREATE_DATE"].ColumnName = "CreateDate";
-
-                        //results.Columns["MATERIAL_GROUP"].ColumnName = "MaterialGroup";
-                        //results.Columns["ANALYSIS_NO"].ColumnName = "AnalysisNo";
-                        //results.Columns["REF_QUALITY_CODE"].ColumnName = "RefQualityCode";
-                        //results.Columns["CREATOR"].ColumnName = "Creator";
-
-
-                        //results.Columns["APPROVE_DATE"].ColumnName = "ApproveDate";
-                        //results.Columns["APPROVER"].ColumnName = "Approver";
-                        //results.Columns["BUYER_ID"].ColumnName = "BuyerIds";
-                        //results.Columns["BRANKS"].ColumnName = "Branks";
-                        //results.Columns["GK_NO"].ColumnName = "GK_NO";
-
-
-                        //results.Columns["QC_REF_PPO"].ColumnName = "QC_Ref_PPO";
-                        //results.Columns["QC_REF_GP"].ColumnName = "QC_Ref_GP";
-                        //results.Columns["HF_REF_PPO"].ColumnName = "HF_Ref_PPO";
-                        //results.Columns["HF_REF_GP"].ColumnName = "HF_Ref_GP";
-                        //results.Columns["CUSTOMERCOMMENT"].ColumnName = "CustomerComment";
-
-
-
-
                         return results;
                     }
                 }
@@ -783,25 +755,6 @@ AND pic.fab_combo_id=fc.fab_combo_id and qc.ppo_qc_id=qcc.ppo_qc_id and ph.custo
 
                     //dtt.Columns.Add("CustomerQualityId", typeof(string));
                     dtt.Columns.Add("Customer Quality ID", typeof(string));
-
-
-                    //dtt.Columns.Add("Heavy_Flat_Knit", typeof(string));
-                    //dtt.Columns.Add("Sourcing", typeof(string));
-                    //dtt.Columns.Add("CreateDate", typeof(string));
-                    //dtt.Columns.Add("MaterialGroup", typeof(string));
-                    //dtt.Columns.Add("AnalysisNo", typeof(string));
-                    //dtt.Columns.Add("RefQualityCode", typeof(string));
-                    //dtt.Columns.Add("Creator", typeof(string));
-                    //dtt.Columns.Add("ApproveDate", typeof(string));
-                    //dtt.Columns.Add("Approver", typeof(string));
-                    //dtt.Columns.Add("BuyserIds", typeof(string));
-                    //dtt.Columns.Add("Branks", typeof(string));
-                    //dtt.Columns.Add("GK_NO", typeof(string));
-                    //dtt.Columns.Add("QC_Ref_PPO", typeof(string));
-                    //dtt.Columns.Add("QC_Ref_GP", typeof(string));
-                    //dtt.Columns.Add("HF_Ref_PPO", typeof(string));
-                    //dtt.Columns.Add("HF_Ref_GP", typeof(string));
-                    //dtt.Columns.Add("CustomerComment", typeof(string));
 
                     string connStrings = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
                     OracleConnection cons = new OracleConnection(connStrings);
@@ -981,11 +934,19 @@ AND pic.fab_combo_id=fc.fab_combo_id and qc.ppo_qc_id=qcc.ppo_qc_id and ph.custo
 
                             //modify:gaofeng 2021 / 01 / 18 < 2021 - 0001 QC System Enhancement from sales > --begin
 
-                            if (m.MillComments.Length > 0) {
-                                m.MillComments = Regex.Replace(m.MillComments, @"[/n/r]", "");
-                            };
+                            if (m.MillComments != null)
+                            {
+                                if (m.MillComments.Length > 0)
+                                {
+                                    m.MillComments = Regex.Replace(m.MillComments, @"[/n/r]", "");
+                                };
+                            }
+                            else
+                            {
+                                m.MillComments = null;
+                            }
 
-                            
+
 
                             dtt.Rows.Add(
                                 
