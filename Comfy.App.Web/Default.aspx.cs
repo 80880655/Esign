@@ -26,13 +26,13 @@ namespace Comfy.App.Web
                 btnMaintain.Visible = false;
 
                 //  账号固定start
-                //HttpContext.Current.Session["UserId"] = "gaokui";
-                //List<string> listCount = new List<string>();
-                //listCount.Add("1");
-                //listCount.Add("2");
-                //listCount.Add("3");
-                //listCount.Add("4");
-                //HttpContext.Current.Session["UserPower"] = listCount;
+                HttpContext.Current.Session["UserId"] = "gaokui";
+                List<string> listCount = new List<string>();
+                listCount.Add("1");
+                listCount.Add("2");
+                listCount.Add("3");
+                listCount.Add("4");
+                HttpContext.Current.Session["UserPower"] = listCount;
                 // 账号固定 end
 
 

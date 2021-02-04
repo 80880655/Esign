@@ -28,7 +28,6 @@
         }
 
         function RedirectURL(val) {            
-            //window.open('/QuailtyCodeUAT/export.aspx?' + val);     
 
             window.open('/QuailtyCode/export.aspx?' + val);  
        }
@@ -541,26 +540,13 @@
         var gparam = "{ }";
         CallAJax(gpath, gparam, function (context) {
             if (context.getcondition != "") {
-
                 // PRD
-                window.open('/QuailtyCode/QuailtyCode/exportCsv.aspx?' + context.getcondition);
+                //window.open('/QuailtyCode/QuailtyCode/exportCsv.aspx?' + context.getcondition);
 
                 // UAT
-                //window.open('/QuailtyCode/exportCsv.aspx?' + context.getcondition);
-
-  
+                window.open('/QuailtyCode/exportCsv.aspx?' + context.getcondition);
             }
         });
-
-
-        //var gpath = "./QueryQC.aspx/Unnamed2_Click";
-        //var gparam = "{ }";
-        //CallAJax(gpath, gparam, function (context) {
-        //    if (context.getcondition != "") {
-        //        window.open('/QuailtyCode/export.aspx?' + context.getcondition);
-        //    }
-        //});
-
     });
 
     //modify:gaofeng 2021 / 01 / 18 < 2021 - 0001 QC System Enhancement from sales > --end

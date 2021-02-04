@@ -14,7 +14,6 @@
              // PRD
              window.open("/QuailtyCode/DownLoadFile.aspx?realName=" + realName + "&outName=" + outName + ((type != undefined && type.length > 0) ? "&type=" + type : ""), "");
 
-
              // UAT
              //window.open("/QuailtyCode/DownLoadFile.aspx?realName=" + realName + "&outName=" + outName + ((type != undefined && type.length > 0) ? "&type=" + type : ""), "");
              
@@ -29,22 +28,18 @@
     <div>
  <table width="100%" style="font-size: small;">
             <tr>
-                <td>
-                 
-                        <legend>点击导出数据，格式为CSV </legend>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" Text="ExportCSV"
-                            onmouseover="this.style.backgroundPosition='left -42px'" onmouseout="this.style.backgroundPosition='left top'"
-                            Class="btn btn-danger" OnClick="BtnExport_Click1" />
-                        <br />
-                     
+                <td>  
+                    <legend>点击导出数据，格式为CSV </legend>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" Text="ExportCSV"
+                        onmouseover="this.style.backgroundPosition='left -42px'" onmouseout="this.style.backgroundPosition='left top'"
+                        Class="btn btn-danger" OnClick="BtnExport_Click1" />
+                    <br />     
                 </td>
             </tr>
         </table>
-
-    
     </div>
     </form>
-
-
 </body>
 </html>
+
+

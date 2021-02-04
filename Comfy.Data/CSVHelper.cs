@@ -77,6 +77,8 @@ namespace Comfy.Data
             }
 
             content = content.Replace(@"\n", "").Replace(@"\r\n", "").Replace((char)13, ' ').Replace((char)10, ' ');
+            content = content.Replace("\\","");
+            
 
             return content;
 
